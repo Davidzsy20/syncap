@@ -27,12 +27,26 @@ const Footer = () => (
           </div>
         </div>
         {/* Right */}
-        <div className="flex gap-5 whitespace-nowrap">
-          {/* <div className="flex-1">
+        <div className="flex flex-col gap-5 whitespace-nowrap lg:flex-row lg:gap-12">
+          <div className="flex-1">
+            <h1 className="mb-4 font-medium">Solutions</h1>
+            <div className="flex flex-col gap-2">
+              <Link href="/platform/owners">
+                <p>Selling a Company</p>
+              </Link>
+              <Link href="/platform/advisors">
+                <p>Buying a Company</p>
+              </Link>
+              <Link href="/platform/buyers-investors">
+                <p>Raising Capital</p>
+              </Link>
+            </div>
+          </div>
+          <div className="flex-1">
             <h1 className="mb-4 font-medium">Platform</h1>
             <div className="flex flex-col gap-2">
               <Link href="/platform/owners">
-                <p>Bussiness Owners</p>
+                <p>Business Owners</p>
               </Link>
               <Link href="/platform/advisors">
                 <p>Advisors</p>
@@ -44,19 +58,20 @@ const Footer = () => (
                 <p>Intermediaries</p>
               </Link>
             </div>
-          </div> */}
-          <div className="flex-1">
-            <h1 className="mb-4 font-medium">Legal</h1>
-            <div className="flex flex-col gap-2">
-              <Link href="/tos">
-                <p>Terms of Service</p>
-              </Link>
-              <Link href="/privacy">
-                <p>Privacy Policy</p>
-              </Link>
-            </div>
           </div>
-          {/* <div className="flex-1">
+          <div className="flex gap-5 whitespace-nowrap lg:gap-8">
+            <div className="flex-1">
+              <h1 className="mb-4 font-medium">Legal</h1>
+              <div className="flex flex-col gap-2">
+                <Link href="/tos">
+                  <p>Terms of Service</p>
+                </Link>
+                <Link href="/privacy">
+                  <p>Privacy Policy</p>
+                </Link>
+              </div>
+            </div>
+            {/* <div className="flex-1">
             <h1 className="mb-4 font-medium">Company</h1>
             <div className="flex flex-col gap-2">
               <Link href="/about">
@@ -67,6 +82,7 @@ const Footer = () => (
               </Link>
             </div>
           </div> */}
+          </div>
         </div>
       </div>
     </Section>

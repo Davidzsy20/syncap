@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type INavbarProps = {
   logo: ReactNode;
@@ -9,20 +9,44 @@ type INavbarProps = {
 
 const NavbarTwoColumns = (props: INavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if the menu button is visible
+      if (
+        menuButtonRef.current &&
+        window.getComputedStyle(menuButtonRef.current).display !== 'none'
+      ) {
+        if (isOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isOpen]);
+
   return (
-    <div className="flex w-full items-center justify-between bg-white p-4">
-      <Link href="/" className="w-32">
+    <div className="z-80 flex w-full items-center justify-between py-4">
+      <Link href="/" className="w-28">
         {props.logo}
       </Link>
       <div className="hidden items-center gap-5 whitespace-nowrap font-medium text-gray-800 md:flex">
         {props.children}
       </div>
-      <div className="absolute right-8 top-8 md:hidden">
+      {/* mobile behavior */}
+      <div ref={menuButtonRef} className="absolute right-8 top-8 md:hidden">
         <button
           onClick={toggleMenu}
           type="button"
@@ -67,10 +91,13 @@ const NavbarTwoColumns = (props: INavbarProps) => {
         </button>
       </div>
       <div
-        className={`${isOpen ? 'block' : 'hidden'} md:hidden`}
+        className={`${isOpen ? 'z-4 fixed inset-0 top-24 bg-gray-800 bg-opacity-75' : 'hidden'} md:hidden`}
+      />
+      <div
+        className={`${isOpen ? 'fixed inset-x-0 top-24 z-10 flex items-center justify-center' : 'hidden'} md:hidden`}
         id="mobile-menu"
       >
-        <div className="flex w-full flex-col items-center space-y-4 py-4">
+        <div className="flex size-full flex-col items-start space-y-4 rounded-b-lg bg-white px-6 py-4">
           {props.children}
         </div>
       </div>
