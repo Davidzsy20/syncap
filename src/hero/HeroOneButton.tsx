@@ -7,10 +7,10 @@ type IHeroOneButtonProps = {
 };
 
 const HeroOneButton = (props: IHeroOneButtonProps) => (
-  <header className="text-center">
+  <header className="flex flex-col items-center text-center">
     {props.title}
     {props.description}
-    <div className="my-10">{props.button}</div>
+    <div className="mt-6">{props.button}</div>
   </header>
 );
 

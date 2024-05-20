@@ -1,12 +1,11 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Clash+Display&family=General+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;700&display=swap');
-$primary-text-title-color: theme('colors.gray.2000');
-$primary-text-color: theme('colors.gray.2000');
+@import url("https://fonts.googleapis.com/css2?family=Clash+Display&family=General+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;700&display=swap");
+$primary-text-title-color: theme("colors.gray.2000");
+$primary-text-color: theme("colors.gray.2000");
 // Define font families
-$futura-font-family: 'Futura PT', 'Helvetica Neue', Arial, sans-serif;
-$h-font-family: 'Clash Display', 'Times New Roman', Times, serif;
-$p-font-family: 'General Sans', 'Arial', sans-serif;
+$futura-font-family: "Futura PT", "Helvetica Neue", Arial, sans-serif;
+$h-font-family: "Clash Display", "Times New Roman", Times, serif;
+$p-font-family: "General Sans", "Arial", sans-serif;
 @layer base {
   :root {
     /* For rgb(255 115 179 / <alpha-value>) */
@@ -20,9 +19,14 @@ $p-font-family: 'General Sans', 'Arial', sans-serif;
   }
 }
 // .primary-p{
-//   @apply 
+//   @apply
 // }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $h-font-family;
   color: $primary-text-title-color;
   font-weight: bold;
@@ -31,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: $p-font-family;
   color: $primary-text-color;
-  font-size:14px;
+  font-size: 14px;
 }
 
 div {
@@ -39,14 +43,13 @@ div {
   font-weight: 400;
 }
 
-
 // CHECKBOX STYLE
 .custom-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 1px solid #CBD5E0;
+  border: 1px solid #cbd5e0;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 0.25rem;
@@ -54,7 +57,7 @@ div {
 }
 
 .custom-checkbox:checked {
-  background-color: #4A5568;
+  background-color: #4a5568;
 }
 
 /* Styles to hide the default checkbox visually */
@@ -64,7 +67,7 @@ div {
 }
 
 .custom-checkbox::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 100%;
   height: 100%;

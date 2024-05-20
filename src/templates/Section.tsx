@@ -68,7 +68,7 @@ export const OurServicesSection = () => {
   return (
     <div className="mx-0 w-full bg-primary-1050">
       <div className="mx-auto w-full max-w-screen-lg p-8">
-        <h2 className="text-lg font-medium text-gray-100">
+        <h2 className="xs:text-md font-medium text-gray-100 md:text-lg">
           Learn how Syncap can help you achieve your strategic objectives <br />{' '}
           with speed, control, and optimized value.
         </h2>

@@ -9,7 +9,7 @@ export function TypographyH3(props: TyppgraphyProps) {
     <h1
       className={clsx(
         props.className,
-        'scroll-m-20 text-2xl font-medium leading-tight tracking-tight md:text-3xl lg:text-4xl xl:text-5xl',
+        'scroll-m-20 text-4xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-5xl',
       )}
     >
       {props.text}
@@ -32,7 +32,12 @@ export function TypographyH4(props: TyppgraphyProps) {
 
 export function TypographyH6(props: TyppgraphyProps) {
   return (
-    <h1 className={clsx(props.className, 'scroll-m-20 text-xl tracking-tight')}>
+    <h1
+      className={clsx(
+        props.className,
+        'scroll-m-20 text-lg tracking-tight md:text-xl',
+      )}
+    >
       {props.text}
     </h1>
   );
@@ -43,7 +48,7 @@ export function TypographyP1(props: TyppgraphyProps) {
     <p
       className={clsx(
         props.className,
-        'text-xl leading-7 [&:not(:first-child)]:mt-6',
+        'xs:text-md pt-6 leading-tight tracking-tight sm:text-lg lg:text-xl',
       )}
     >
       {props.text}

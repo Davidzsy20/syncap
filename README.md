@@ -168,5 +168,4 @@ See [LICENSE](LICENSE) for more information.
 
 ---
 
-
 [![Sponsor Next JS Boilerplate](https://cdn.buymeacoffee.com/buttons/default-red.png)](https://www.buymeacoffee.com/ixartz)
