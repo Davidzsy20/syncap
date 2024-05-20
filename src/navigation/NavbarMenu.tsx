@@ -1,6 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { CaretDownIcon } from '@radix-ui/react-icons';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import { TypographyH6 } from '@/components/Text';
@@ -8,6 +8,7 @@ import { TypographyH6 } from '@/components/Text';
 import { platformMenuItems } from './menuItems'; // Adjust the import path as necessary
 
 export const NavbarMenu = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPlatformMenuOpen, setPlatformMenuOpen] = useState(false);
@@ -30,6 +31,12 @@ export const NavbarMenu = () => {
     }
   };
 
+  const handleLinkClick = (href: string) => {
+    setIsOpen(false);
+    setPlatformMenuOpen(false);
+    router.push(href);
+  };
+
   return (
     <Menu as="div" className="relative">
       <MenuButton
@@ -47,9 +54,11 @@ export const NavbarMenu = () => {
             {platformMenuItems.map((item) => (
               <MenuItem as="div" key={item.href}>
                 {({ active, focus }) => (
-                  <Link
-                    href={item.href}
-                    className={`flex flex-col p-3 ${focus ? 'rounded-md bg-gray-100' : ''} ${active ? 'bg-gray-200' : ''}`}
+                  <div
+                    onClick={() => handleLinkClick(item.href)}
+                    className={`flex cursor-pointer flex-col p-3 ${
+                      focus ? 'rounded-md bg-gray-100' : ''
+                    } ${active ? 'bg-gray-200' : ''}`}
                   >
                     <TypographyH6
                       text={item.title}
@@ -58,7 +67,7 @@ export const NavbarMenu = () => {
                     <p className="hidden text-wrap text-sm leading-tight text-gray-600 md:block">
                       {item.description}
                     </p>
-                  </Link>
+                  </div>
                 )}
               </MenuItem>
             ))}
@@ -70,9 +79,11 @@ export const NavbarMenu = () => {
           {platformMenuItems.map((item) => (
             <MenuItem as="div" key={item.href}>
               {({ active, focus }) => (
-                <Link
-                  href={item.href}
-                  className={`flex flex-col p-3 ${focus ? 'rounded-md bg-gray-100' : ''} ${active ? 'bg-gray-200' : ''}`}
+                <div
+                  onClick={() => handleLinkClick(item.href)}
+                  className={`flex cursor-pointer flex-col p-3 ${
+                    focus ? 'rounded-md bg-gray-100' : ''
+                  } ${active ? 'bg-gray-200' : ''}`}
                 >
                   <TypographyH6
                     text={item.title}
@@ -81,7 +92,7 @@ export const NavbarMenu = () => {
                   <p className="text-wrap text-sm leading-tight text-gray-600">
                     {item.description}
                   </p>
-                </Link>
+                </div>
               )}
             </MenuItem>
           ))}
