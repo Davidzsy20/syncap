@@ -3,7 +3,7 @@ import { Meta } from '@/layout/Meta';
 import { Section } from '@/layout/Section';
 import { Banner } from '@/templates/Banner';
 import { FourMainFeatures } from '@/templates/FourMainFeatures';
-import Hero from '@/templates/Hero';
+import { HomepageHero } from '@/templates/HeroSections';
 import { IntegrationAndSecurity } from '@/templates/IntegrationAndSecurity';
 import { OurServicesSection } from '@/templates/Section';
 import { AppConfig } from '@/utils/AppConfig';
@@ -63,8 +63,7 @@ const EfficiencyPropsSection = () => (
 const Index = () => (
   <LandingLayout>
     <Meta title={AppConfig.title} description={AppConfig.description} />
-
-    <Hero />
+    <HomepageHero />
     <OurServicesSection />
     <Section
       yPadding="py-16"
