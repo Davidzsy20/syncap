@@ -1,5 +1,7 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const Owners = () => {
-  return <>Owners</>;
+  return <LandingLayout>Owners</LandingLayout>;
 };
 
 export default Owners;

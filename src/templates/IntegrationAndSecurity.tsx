@@ -3,6 +3,7 @@ import { Section } from '../layout/Section';
 const IntegrationAndSecurity = () => (
   <>
     <Section
+      yPadding="py-16"
       title={
         <>
           <h2>Seamless Integration with Your Existing Workflow</h2>

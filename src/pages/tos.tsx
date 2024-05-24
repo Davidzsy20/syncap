@@ -1,5 +1,7 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const TOS = () => {
-  return <>TOS</>;
+  return <LandingLayout>Terms of Service</LandingLayout>;
 };
 
 export default TOS;

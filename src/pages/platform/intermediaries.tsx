@@ -1,5 +1,7 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const Intermediaries = () => {
-  return <>intermediaries</>;
+  return <LandingLayout>intermediaries</LandingLayout>;
 };
 
 export default Intermediaries;

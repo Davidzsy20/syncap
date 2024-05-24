@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { TypographyH6 } from '@/components/Text';
 
-import { platformMenuItems } from './menuItems'; // Adjust the import path as necessary
+import { platformMenuItems } from './menuItems';
 
 export const NavbarMenu = () => {
   const router = useRouter();

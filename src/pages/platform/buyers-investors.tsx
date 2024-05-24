@@ -1,5 +1,7 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const Buyers = () => {
-  return <>Buyers & Investors</>;
+  return <LandingLayout>Buyers & Investors</LandingLayout>;
 };
 
 export default Buyers;

@@ -91,7 +91,7 @@ const NavbarTwoColumns = (props: INavbarProps) => {
         </button>
       </div>
       <div
-        className={`${isOpen ? 'z-4 fixed inset-0 top-24 bg-gray-800 bg-opacity-75' : 'hidden'} md:hidden`}
+        className={`${isOpen ? 'z-4 bg-opacity/75 fixed inset-0 top-24 bg-gray-800' : 'hidden'} md:hidden`}
       />
       <div
         className={`${isOpen ? 'fixed inset-x-0 top-24 z-10 flex items-center justify-center' : 'hidden'} md:hidden`}

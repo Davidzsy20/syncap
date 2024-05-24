@@ -8,7 +8,7 @@ import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { MeetingLink } from '../utils/AppConfig';
 
-export const Hero = () => (
+const Hero = () => (
   <Background color="bg-grey-100">
     <Section yPadding="pt-10 md:pt-20">
       <HeroOneButton
@@ -21,14 +21,17 @@ export const Hero = () => (
         description={
           <TypographyP1
             className="text-balance text-black text-opacity-50"
-            text={`Everything you need to access strategic capital and close a M&A transaction, all on a single platform`}
+            text={`Everything you need from accessing strategic capital to closing a M&A transaction, all on a single platform`}
           />
         }
         button={
           <Button className="mx-auto">
             <a href={MeetingLink} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center">
-                <TypographyB2 text="Get started" />
+                <TypographyB2
+                  className="text-primary-1050"
+                  text="Get started"
+                />
                 <ArrowTopRightIcon className="ml-2 size-5" />
               </div>
             </a>

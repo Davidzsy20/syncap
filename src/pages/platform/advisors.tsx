@@ -1,5 +1,11 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const AdvisorPage = () => {
-  return <>advisors</>;
+  return (
+    <LandingLayout>
+      <p>advisors</p>
+    </LandingLayout>
+  );
 };
 
 export default AdvisorPage;
