@@ -1,5 +1,5 @@
-import LandingLayout from '@/layout/LandingLayout';
-import { BusinessOwnerHero } from '@/templates/HeroSections';
+import LandingLayout from '@/components/layout/LandingLayout';
+import { BusinessOwnerHero } from '@/components/templates/HeroSections';
 
 const Owners = () => {
   return (

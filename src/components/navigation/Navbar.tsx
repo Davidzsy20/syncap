@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 
 import { Button } from '@/components/Button';
+import { Section } from '@/components/layout/Section';
 import { TypographyH6 } from '@/components/Text';
-import { Section } from '@/layout/Section';
 
 import { Logo } from '../templates/Logo';
 import { NavbarMenu } from './NavbarMenu';
