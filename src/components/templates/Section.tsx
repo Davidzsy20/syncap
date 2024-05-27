@@ -77,7 +77,7 @@ export const OurServicesSection = () => {
 
         <SelectionGroup />
         <div className="flex justify-start">
-          <Link href="/form/userInquery">
+          <Link href="/form/userInquiry">
             <Button
               className="flex flex-nowrap items-center whitespace-nowrap"
               variant="secondary"

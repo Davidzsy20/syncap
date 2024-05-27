@@ -1,4 +1,5 @@
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import {
@@ -33,7 +34,7 @@ export const HomepageHero = () => (
         }
         button={
           <Button className="mx-auto">
-            <a href={MeetingLink} target="_blank" rel="noopener noreferrer">
+            <Link href={'/form/userInquiry'}>
               <div className="flex items-center">
                 <TypographyB2
                   className="text-primary-1050"
@@ -41,7 +42,7 @@ export const HomepageHero = () => (
                 />
                 <ArrowTopRightIcon className="ml-2 size-5" />
               </div>
-            </a>
+            </Link>
           </Button>
         }
       />

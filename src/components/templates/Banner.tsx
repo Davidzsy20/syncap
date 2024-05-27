@@ -21,7 +21,7 @@ const Banner = () => (
           className="flex items-center whitespace-nowrap"
           variant="primary"
         >
-          <Link href="/form/userInquery">
+          <Link href="/form/userInquiry">
             <p className="font-medium">Schedule an Initial Consultation</p>
             <ArrowTopRightIcon className="ml-1" />
           </Link>

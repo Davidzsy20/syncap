@@ -1,7 +1,7 @@
 import { StarIcon } from '@/public/icons/icons';
 
-import { VerticalFeatureRow } from '../VerticalFeatureRow';
 import { Section } from '../layout/Section';
+import { VerticalFeatureRow } from '../VerticalFeatureRow';
 
 const FourMainFeatures = () => (
   <Section

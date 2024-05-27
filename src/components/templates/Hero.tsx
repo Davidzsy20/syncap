@@ -26,7 +26,7 @@ const Hero = () => (
         }
         button={
           <Button className="mx-auto" variant={'primary'}>
-            <Link href={'/form/userInquery'}>
+            <Link href={'/form/userInquiry'}>
               <a>
                 <div className="flex items-center">
                   <TypographyB2

@@ -1,11 +1,13 @@
+import { Input, Textarea } from '@headlessui/react';
+
 import { Button } from '@/components/Button';
 import { CheckBox } from '@/components/Checkbox';
-import { DropdownInput, Input, Textarea } from '@/components/Input';
+import { DropdownInput } from '@/components/Input';
 import { FormLayout } from '@/components/layout/FormLayout';
 import { TypographyP2 } from '@/components/Text';
 // import { useFormValidation } from '@/hooks/useValidation';
 
-const userInqueryForm = () => {
+const userInquiry = () => {
   // const { validateForm } = useFormValidation('/form/userInquiry');
 
   return (
@@ -51,7 +53,7 @@ const userInqueryForm = () => {
           label="I would like to receive a complimentary preliminary valuation assessment report."
         />
         <CheckBox label="I agree to receive communications from Syncap, and I understand Syncap will process my personal information in accordance with Syncap's Privacy Policy.*" />
-        <Button variant="solid" className="w-[50%]">
+        <Button variant="solid" className="w-1/3">
           Submit
         </Button>
       </div>
@@ -59,4 +61,4 @@ const userInqueryForm = () => {
   );
 };
 
-export default userInqueryForm;
+export default userInquiry;

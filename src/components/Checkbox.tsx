@@ -1,10 +1,10 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
 import { Button } from './Button';
 
 export const CheckBox = ({ label, selected, onSelect, className }: any) => {
   return (
-    <div className={clsx(className, 'flex items-center space-x-2 py-2')}>
+    <div className={cn(className, 'flex items-center space-x-2 py-2')}>
       <input
         onClick={onSelect}
         type="checkbox"
@@ -25,7 +25,7 @@ export const CheckBox = ({ label, selected, onSelect, className }: any) => {
 
 export const CheckBoxButton = ({ classname, children, onSelect }: any) => {
   return (
-    <Button className={clsx(classname)} variant={'checkbox'} onClick={onSelect}>
+    <Button className={cn(classname)} variant={'checkbox'} onClick={onSelect}>
       {children}
     </Button>
   );
