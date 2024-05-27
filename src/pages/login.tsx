@@ -63,7 +63,7 @@ export default function LoginPage() {
             </div>
             <p className="mt-4 text-xs text-gray-600">
               By clicking continue, you agree to our{' '}
-              <Link href="/terms" className="underline">
+              <Link href="/termsofservice" className="underline">
                 Terms of Service
               </Link>{' '}
               and{' '}

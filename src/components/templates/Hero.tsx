@@ -27,13 +27,15 @@ const Hero = () => (
         button={
           <Button className="mx-auto" variant={'primary'}>
             <Link href={'/form/userInquery'}>
-              <div className="flex items-center">
-                <TypographyB2
-                  className="text-primary-1050"
-                  text="Get started"
-                />
-                <ArrowTopRightIcon className="ml-2 size-5" />
-              </div>
+              <a>
+                <div className="flex items-center">
+                  <TypographyB2
+                    className="text-primary-1050"
+                    text="Get started"
+                  />
+                  <ArrowTopRightIcon className="ml-2 size-5" />
+                </div>
+              </a>
             </Link>
           </Button>
         }

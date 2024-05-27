@@ -1,7 +1,12 @@
 import LandingLayout from '@/components/layout/LandingLayout';
+import { IntermediariesHero } from '@/components/templates/HeroSections';
 
 const Intermediaries = () => {
-  return <LandingLayout>intermediaries</LandingLayout>;
+  return (
+    <LandingLayout>
+      <IntermediariesHero />
+    </LandingLayout>
+  );
 };
 
 export default Intermediaries;

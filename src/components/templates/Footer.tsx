@@ -16,7 +16,7 @@ const Footer = () => (
           <div className="flex flex-col gap-2">
             <p>© 2024 Syncap. All rights reserved</p>
             <span className="flex gap-2">
-              <Link href="/tos">
+              <Link href="/termsofservice">
                 <p>Terms of Service</p>
               </Link>
               |
@@ -63,7 +63,7 @@ const Footer = () => (
             <div className="flex-1">
               <h1 className="mb-4 font-medium">Legal</h1>
               <div className="flex flex-col gap-2">
-                <Link href="/tos">
+                <Link href="/termsofservice">
                   <p>Terms of Service</p>
                 </Link>
                 <Link href="/privacy">
