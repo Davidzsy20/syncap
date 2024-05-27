@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Background } from '../background/Background';
+import { Background } from '../Background';
 import { Section } from '../layout/Section';
 
 const Footer = () => (

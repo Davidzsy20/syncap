@@ -1,4 +1,4 @@
-import LandingLayout from '@/layout/LandingLayout';
+import LandingLayout from '@/components/layout/LandingLayout';
 
 const Intermediaries = () => {
   return <LandingLayout>intermediaries</LandingLayout>;

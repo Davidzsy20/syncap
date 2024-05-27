@@ -1,16 +1,16 @@
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import { TypographyB2, TypographyH3, TypographyP1 } from '@/components/Text';
 
-import { Background } from '../background/Background';
+import { Background } from '../Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
-import { MeetingLink } from '../utils/AppConfig';
 
 const Hero = () => (
   <Background color="bg-grey-100">
-    <Section yPadding="pt-10 md:pt-20">
+    <Section yPadding=" py-6">
       <HeroOneButton
         title={
           <>
@@ -25,8 +25,8 @@ const Hero = () => (
           />
         }
         button={
-          <Button className="mx-auto">
-            <a href={MeetingLink} target="_blank" rel="noopener noreferrer">
+          <Button className="mx-auto" variant={'primary'}>
+            <Link href={'/form/userInquery'}>
               <div className="flex items-center">
                 <TypographyB2
                   className="text-primary-1050"
@@ -34,11 +34,15 @@ const Hero = () => (
                 />
                 <ArrowTopRightIcon className="ml-2 size-5" />
               </div>
-            </a>
+            </Link>
           </Button>
         }
       />
-      <img src={'assets/images/figure-hero-1.png'} alt="hero-figure-1" />
+      <img
+        src={'assets/images/figure-hero-1.png'}
+        alt="hero-figure-1"
+        className="w-2/3"
+      />
     </Section>
   </Background>
 );

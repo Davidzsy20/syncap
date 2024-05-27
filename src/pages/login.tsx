@@ -6,7 +6,7 @@ import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Label } from '@/components/Label';
 import { TypographyH5, TypographyP2 } from '@/components/Text';
-import { Logo } from '@/templates/Logo';
+import { Logo } from '@/components/templates/Logo';
 
 export const metadata: Metadata = {
   title: 'Login',
