@@ -61,7 +61,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         {
           'flex-row-reverse': props.reverse,
         },
-        show ? 'opacity-100' : 'opacity-10 translate-y-20',
+        show ? 'opacity-100' : 'opacity-10 translate-y-20'
       )}
       ref={ref}
     >

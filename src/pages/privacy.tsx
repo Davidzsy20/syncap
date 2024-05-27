@@ -1,5 +1,7 @@
+import LandingLayout from '@/layout/LandingLayout';
+
 const Privacy = () => {
-  return <>Privacy</>;
+  return <LandingLayout>Privacy</LandingLayout>;
 };
 
 export default Privacy;

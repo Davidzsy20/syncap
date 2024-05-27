@@ -4,8 +4,8 @@ import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
 const Footer = () => (
-  <Background color="bg-primary-10">
-    <Section>
+  <Background color="bg-primary-10" className="inset-x-0 bottom-0">
+    <Section yPadding="py-16">
       <div className="flex w-full justify-between py-5">
         <div className="flex flex-col gap-10">
           <img
@@ -16,7 +16,7 @@ const Footer = () => (
           <div className="flex flex-col gap-2">
             <p>© 2024 Syncap. All rights reserved</p>
             <span className="flex gap-2">
-              <Link href="/tos">
+              <Link href="/termsofservice">
                 <p>Terms of Service</p>
               </Link>
               |
@@ -63,7 +63,7 @@ const Footer = () => (
             <div className="flex-1">
               <h1 className="mb-4 font-medium">Legal</h1>
               <div className="flex flex-col gap-2">
-                <Link href="/tos">
+                <Link href="/termsofservice">
                   <p>Terms of Service</p>
                 </Link>
                 <Link href="/privacy">

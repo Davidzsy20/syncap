@@ -5,6 +5,7 @@ import { Section } from '../layout/Section';
 
 const FourMainFeatures = () => (
   <Section
+    yPadding="py-16"
     title={
       <>
         <h2>

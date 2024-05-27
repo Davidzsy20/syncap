@@ -1,5 +1,12 @@
+import LandingLayout from '@/layout/LandingLayout';
+import { BuyersInvestorsHero } from '@/templates/HeroSections';
+
 const Buyers = () => {
-  return <>Buyers & Investors</>;
+  return (
+    <LandingLayout>
+      <BuyersInvestorsHero />
+    </LandingLayout>
+  );
 };
 
 export default Buyers;

@@ -1,5 +1,12 @@
+import LandingLayout from '@/layout/LandingLayout';
+import { AdvisorsHero } from '@/templates/HeroSections';
+
 const AdvisorPage = () => {
-  return <>advisors</>;
+  return (
+    <LandingLayout>
+      <AdvisorsHero />
+    </LandingLayout>
+  );
 };
 
 export default AdvisorPage;
