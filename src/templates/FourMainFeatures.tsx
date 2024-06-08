@@ -8,13 +8,12 @@ const FourMainFeatures = () => (
     yPadding="py-16"
     title={
       <>
-        <h2>
-          Industry-leading Platform Delivering <br /> Best-in-Class Advisory
-          Experience
+        <h2 className="text-balance">
+          Industry-leading Platform Delivering Best-in-Class Advisory Experience
         </h2>
       </>
     }
-    // description=""
+    description="Syncap's platform leverages artificial intelligence and agentic workflow to streamline and optimize the entire M&A process, from deal sourcing and execution to due diligence and closing. Our end-to-end M&A tech stack enables Syncap to provide comprehensive, data-driven M&A advisory at an unprecedented scale for SMBs."
   >
     <VerticalFeatureRow
       title="Streamlined Deal Management for Enhanced Visibility & Efficiency"

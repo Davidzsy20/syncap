@@ -22,7 +22,9 @@ export const ValuePropBlock = ({ icon, title, description }: Prop) => {
         className="mx-auto mb-2 aspect-square w-1/4 max-w-[64px]"
       />
       <p className="mb-2 text-xl font-bold">{title}</p>
-      <p>{description}</p>
+      <p className="text-balance text-center text-black text-opacity-50">
+        {description}
+      </p>
     </div>
   );
 };
@@ -70,28 +72,28 @@ const Index = () => (
       title={
         <>
           <h1>
-            Superior Approach = <br />
-            Optimized Transaction Outcomes
+            Revolutionizing M&A Advisory & <br /> Capital Access for SMBs
           </h1>
         </>
       }
+      description="Syncap is an AI-powered transaction-as-a-service platform providing M&A advisory and execution to SMBs at scale. Combining expertise of independent M&A bankers and cutting-edge platform technology, we transform investment banking with an outcome-driven approach  emphasizing visibility, efficiency, and alignment."
     >
       <div className="flex flex-col gap-4 lg:flex-row">
         <ValuePropBlock
           icon="/assets/images/tailored_process_illustration.png"
-          title="Tailored, Advisor-led Process"
-          description="Navigate discretely, at your own pace, maintaining full control over every phase."
+          title="Tailored Advisory from Independent M&A Experts"
+          description="Syncap's independent investment bankers, M&A attorneys, and CPAs offer comprehensive, unbiased M&A-focused guidance tailored to SMBs' best interests"
         />
         <ValuePropBlock
           icon="/assets/images/streamlined_platform_illustration.png"
-          title="Streamlined Deal Management Platform"
-          description="Achieve peak efficiency through a structured, step-by-step, guided process."
+          title="AI-Powered M&A Process Management"
+          description="Syncap’s comprehensive platform enhances M&A lifecycles with intelligent workflow, data room, knowledge base, and other capabilities, offering SMBs unmatched visibility and control "
         />
         <ValuePropBlock
           icon="/assets/images/optimized_matching_illustration.png"
-          title="Optimized Buyer &
-        Investor Matching"
-          description="Maximize your valuation by closing with the buyer or investor(s) optimized for synergies."
+          title="Optimized Buyer and 
+          Investor Matching"
+          description="Syncap's AI-driven matching and extensive investor network provides SMBs with access to a broader and more relevant pool of buyers and capital sources, ensuring optimal alignment"
         />
       </div>
     </Section>
