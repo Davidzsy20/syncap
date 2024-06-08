@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { Button } from '@/components/Button';
 import { TypographyB2 } from '@/components/Text';
 
-import { Background } from '../background/Background';
+import { Background } from '../Background';
 import { Section } from './Section';
 
 interface HeroProps {

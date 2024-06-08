@@ -1,7 +1,8 @@
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
-import { Button } from '../components/Button';
-import { CTABanner } from '../cta/CTABanner';
+import { Button } from '../Button';
+import { CTABanner } from '../CTABanner';
 import { Section } from '../layout/Section';
 
 const Banner = () => (
@@ -20,8 +21,10 @@ const Banner = () => (
           className="flex items-center whitespace-nowrap"
           variant="primary"
         >
-          <p className="font-medium">Schedule an Initial Consultation</p>
-          <ArrowTopRightIcon className="ml-1" />
+          <Link href="/form/userInquiry">
+            <p className="font-medium">Schedule an Initial Consultation</p>
+            <ArrowTopRightIcon className="ml-1" />
+          </Link>
         </Button>
       }
       image="/assets/images/bannerCTA.png"

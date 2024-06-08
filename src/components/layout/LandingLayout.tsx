@@ -1,5 +1,5 @@
-import Navbar from '@/navigation/Navbar';
-import { Footer } from '@/templates/Footer';
+import Navbar from '@/components/navigation/Navbar';
+import { Footer } from '@/components/templates/Footer';
 
 interface ProsType {
   children: any;
