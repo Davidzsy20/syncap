@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Label } from '@/components/Label';
+import { Logo } from '@/components/templates/Logo';
 import { TypographyH5, TypographyP2 } from '@/components/Text';
-import { Logo } from '@/templates/Logo';
 
 export const metadata: Metadata = {
   title: 'Login',

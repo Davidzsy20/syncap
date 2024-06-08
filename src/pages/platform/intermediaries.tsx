@@ -1,5 +1,5 @@
-import LandingLayout from '@/layout/LandingLayout';
-import { IntermediariesHero } from '@/templates/HeroSections';
+import LandingLayout from '@/components/layout/LandingLayout';
+import { IntermediariesHero } from '@/components/templates/HeroSections';
 
 const Intermediaries = () => {
   return (

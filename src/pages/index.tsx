@@ -1,11 +1,11 @@
-import LandingLayout from '@/layout/LandingLayout';
-import { Meta } from '@/layout/Meta';
-import { Section } from '@/layout/Section';
-import { Banner } from '@/templates/Banner';
-import { FourMainFeatures } from '@/templates/FourMainFeatures';
-import { HomepageHero } from '@/templates/HeroSections';
-import { IntegrationAndSecurity } from '@/templates/IntegrationAndSecurity';
-import { OurServicesSection } from '@/templates/Section';
+import LandingLayout from '@/components/layout/LandingLayout';
+import { Meta } from '@/components/layout/Meta';
+import { Section } from '@/components/layout/Section';
+import { Banner } from '@/components/templates/Banner';
+import { FourMainFeatures } from '@/components/templates/FourMainFeatures';
+import { HomepageHero } from '@/components/templates/HeroSections';
+import { IntegrationAndSecurity } from '@/components/templates/IntegrationAndSecurity';
+import { OurServicesSection } from '@/components/templates/Section';
 import { AppConfig } from '@/utils/AppConfig';
 
 interface Prop {

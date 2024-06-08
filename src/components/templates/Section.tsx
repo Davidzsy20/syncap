@@ -1,12 +1,13 @@
 import { ArrowTopRightIcon, CheckIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import { CheckBox, CheckBoxButton } from '@/components/Checkbox';
 
-import { Button } from '../components/Button';
+import { Button } from '../Button';
 
-const SelectionGroup = () => {
+export const SelectionGroup = () => {
   const options = [
     'Selling a Business',
     'Buying a Business',
@@ -57,6 +58,7 @@ const SelectionGroup = () => {
         onSelect={() => {
           setWithReport(!withReport);
         }}
+        className="invert"
         selected={withReport}
         label="I would like to receive a complimentary preliminary valuation assessment report."
       />
@@ -72,15 +74,18 @@ export const OurServicesSection = () => {
           Learn how Syncap can help you achieve your strategic objectives <br />
           with speed, control, and optimized value.
         </h2>
+
         <SelectionGroup />
         <div className="flex justify-start">
-          <Button
-            className="flex items-center whitespace-nowrap"
-            variant="secondary"
-          >
-            <p className="font-medium">Schedule an Initial Consultation</p>
-            <ArrowTopRightIcon className="ml-1" />
-          </Button>
+          <Link href="/form/userInquiry">
+            <Button
+              className="flex flex-nowrap items-center whitespace-nowrap"
+              variant="secondary"
+            >
+              <p className="font-medium">Schedule an Initial Consultation</p>
+              <ArrowTopRightIcon className="ml-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

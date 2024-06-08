@@ -1,4 +1,5 @@
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import {
@@ -8,12 +9,12 @@ import {
   TypographyP0,
   TypographyP1,
 } from '@/components/Text';
-import { HorizontalHero } from '@/layout/Hero';
+import { MeetingLink } from '@/utils/AppConfig';
 
-import { Background } from '../background/Background';
+import { Background } from '../Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
+import { HorizontalHero } from '../layout/Hero';
 import { Section } from '../layout/Section';
-import { MeetingLink } from '../utils/AppConfig';
 
 export const HomepageHero = () => (
   <Background color="bg-grey-100">
@@ -33,7 +34,7 @@ export const HomepageHero = () => (
         }
         button={
           <Button className="mx-auto">
-            <a href={MeetingLink} target="_blank" rel="noopener noreferrer">
+            <Link href={'/form/userInquiry'}>
               <div className="flex items-center">
                 <TypographyB2
                   className="text-primary-1050"
@@ -41,7 +42,7 @@ export const HomepageHero = () => (
                 />
                 <ArrowTopRightIcon className="ml-2 size-5" />
               </div>
-            </a>
+            </Link>
           </Button>
         }
       />
