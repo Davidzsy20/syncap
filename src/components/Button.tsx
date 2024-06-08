@@ -84,7 +84,7 @@ const Button = (props: IButtonProps) => {
         'w-fit cursor-pointer rounded-sm px-4 py-3',
         className,
         variant === 'primary'
-          ? 'border border-black hover:bg-primary-700 focus:ring focus:ring-primary-600 active:bg-primary-800'
+          ? 'border border-black hover:bg-gray-100 focus:ring focus:ring-primary-600 active:bg-gray-600'
           : '',
         variant === 'secondary'
           ? 'bg-primary-200 hover:bg-primary-300 focus:ring focus:ring-primary-100 active:bg-primary-400'
