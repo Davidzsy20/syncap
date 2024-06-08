@@ -27,7 +27,7 @@ const Hero = ({
   verticalPadding = true,
 }: HeroProps) => (
   <Background color="bg-grey-100">
-    <Section yPadding={verticalPadding ? 'pt-10 md:pt-20' : 'pt-10'}>
+    <Section yPadding={verticalPadding ? 'pt-10 md:pt-16' : 'pt-10'}>
       <div
         className={`flex flex-col ${layout === 'horizontal' ? 'items-center text-center lg:flex-row lg:pb-20 lg:text-left' : ''}`}
       >
@@ -43,8 +43,8 @@ const Hero = ({
             </a>
           </Button>
         </div>
-        <div className="mt-8 flex-1 lg:mt-0">
-          <img src={imageSrc} alt="hero-figure" className="mx-auto lg:mx-0" />
+        <div className="mt-8">
+          <img src={imageSrc} alt={imageSrc} className="lg:size-[360px]" />
         </div>
       </div>
     </Section>

@@ -6,8 +6,8 @@ import {
   TypographyB2,
   TypographyH2,
   TypographyH3,
-  TypographyP0,
   TypographyP1,
+  TypographyP2,
 } from '@/components/Text';
 import { MeetingLink } from '@/utils/AppConfig';
 
@@ -18,7 +18,7 @@ import { Section } from '../layout/Section';
 
 export const HomepageHero = () => (
   <Background color="bg-grey-100">
-    <Section yPadding="pt-10 md:pt-20">
+    <Section yPadding="pt-10 md:pt-16">
       <HeroOneButton
         title={
           <>
@@ -27,8 +27,8 @@ export const HomepageHero = () => (
           </>
         }
         description={
-          <TypographyP0
-            className="text-balance text-black text-opacity-50"
+          <TypographyP2
+            className="w-5/6 text-balance text-black text-opacity-50"
             text={`Everything you need from accessing strategic capital to closing a M&A transaction, all on a single platform`}
           />
         }
@@ -46,7 +46,11 @@ export const HomepageHero = () => (
           </Button>
         }
       />
-      <img src={'assets/images/figure-hero-1.png'} alt="hero-figure-1" />
+      <img
+        className="pt-12"
+        src={'assets/images/landing-hero.png'}
+        alt="landing-hero"
+      />
     </Section>
   </Background>
 );
@@ -68,7 +72,7 @@ export const BusinessOwnerHero = () => (
       />
     }
     buttonText="Get Started"
-    imageSrc="/assets/images/figure-hero-1.png"
+    imageSrc="/assets/images/business-owners-hero.png"
     link={MeetingLink}
   />
 );
@@ -90,7 +94,7 @@ export const AdvisorsHero = () => (
       />
     }
     buttonText="Get Started"
-    imageSrc="/assets/images/figure-hero-1.png"
+    imageSrc="/assets/images/advisors.png"
     link={MeetingLink}
   />
 );
@@ -112,7 +116,7 @@ export const BuyersInvestorsHero = () => (
       />
     }
     buttonText="Apply for Membership"
-    imageSrc="/assets/images/figure-hero-1.png"
+    imageSrc="/assets/images/investors-hero.png"
     link={MeetingLink}
   />
 );
@@ -134,7 +138,7 @@ export const IntermediariesHero = () => (
       />
     }
     buttonText="Apply for Membership"
-    imageSrc="/assets/images/figure-hero-1.png"
+    imageSrc="/assets/images/intermediaries-hero.png"
     link={MeetingLink}
   />
 );

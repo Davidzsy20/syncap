@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 
+import { TypographyP1 } from '@/components/Text';
+
 type ISectionProps = {
   title?: ReactNode;
   description?: string;
@@ -20,16 +22,16 @@ const Section = (props: ISectionProps) => (
       } ${props.yPadding ? props.yPadding : ''}`}
     >
       {(props.title || props.description) && (
-        <div className="mb-12 text-center">
+        <div className="w-6/7 mb-12 text-center">
           {props.title && (
             <div className="text-3xl font-semibold text-gray-900 xl:text-4xl">
               {props.title}
             </div>
           )}
           {props.description && (
-            <div className="mt-4 text-lg md:px-20 md:text-xl">
+            <TypographyP1 className="text-balance text-center text-black text-opacity-50">
               {props.description}
-            </div>
+            </TypographyP1>
           )}
         </div>
       )}

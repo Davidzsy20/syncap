@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 
-interface TyppgraphyProps {
+interface TypographyProps {
   text?: string;
   className?: string;
   children?: any;
 }
 
-export function TypographyH2(props: TyppgraphyProps) {
+export function TypographyH2(props: TypographyProps) {
   return (
     <h1
       className={clsx(
@@ -19,7 +19,7 @@ export function TypographyH2(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyH3(props: TyppgraphyProps) {
+export function TypographyH3(props: TypographyProps) {
   return (
     <h1
       className={clsx(
@@ -32,7 +32,7 @@ export function TypographyH3(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyH4(props: TyppgraphyProps) {
+export function TypographyH4(props: TypographyProps) {
   return (
     <h1
       className={clsx(
@@ -45,7 +45,7 @@ export function TypographyH4(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyH5(props: TyppgraphyProps) {
+export function TypographyH5(props: TypographyProps) {
   return (
     <p
       className={clsx(
@@ -59,7 +59,7 @@ export function TypographyH5(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyH6(props: TyppgraphyProps) {
+export function TypographyH6(props: TypographyProps) {
   return (
     <h1
       className={clsx(
@@ -72,7 +72,7 @@ export function TypographyH6(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyP0(props: TyppgraphyProps) {
+export function TypographyP0(props: TypographyProps) {
   return (
     <p
       className={clsx(
@@ -85,25 +85,20 @@ export function TypographyP0(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyP1(props: TyppgraphyProps) {
+export function TypographyP1(props: TypographyProps) {
   return (
-    <p
-      className={clsx(
-        'xs:text-md pt-6 leading-tight tracking-tight sm:text-lg lg:text-xl',
-        props.className
-      )}
-    >
+    <p className={clsx('xs:text-md text-md pt-6', props.className)}>
       {props.children}
     </p>
   );
 }
 
-export function TypographyP2(props: TyppgraphyProps) {
+export function TypographyP2(props: TypographyProps) {
   return (
     <p
       className={clsx(
         props.className,
-        'text-lg leading-7 [&:not(:first-child)]:mt-6'
+        'text-lg leading-7 lg:text-xl [&:not(:first-child)]:mt-6'
       )}
     >
       {props.text}
@@ -112,7 +107,7 @@ export function TypographyP2(props: TyppgraphyProps) {
   );
 }
 
-export function TypographyB2(props: TyppgraphyProps) {
+export function TypographyB2(props: TypographyProps) {
   return (
     <p
       className={clsx(
