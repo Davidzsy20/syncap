@@ -87,7 +87,12 @@ export function TypographyP0(props: TypographyProps) {
 
 export function TypographyP1(props: TypographyProps) {
   return (
-    <p className={clsx('xs:text-md text-md pt-6', props.className)}>
+    <p
+      className={clsx(
+        'xs:text-md text-md [&:not(:first-child)]:pt-6',
+        props.className
+      )}
+    >
       {props.children}
     </p>
   );

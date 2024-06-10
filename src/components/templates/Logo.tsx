@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Logo = () => {
   return (
-    <span className="inline-flex min-w-[112px] items-center text-gray-900">
+    <span className="aspect-ratio inline-flex min-w-[120px]">
       <Image
         src="/assets/images/syncap_logo.png"
         alt="Logo"

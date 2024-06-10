@@ -23,10 +23,10 @@ export default function LoginPage() {
         {/* Left Side */}
         <div className="hidden h-full w-2/5 flex-col justify-end bg-primary-1050/75 px-8 py-16 lg:flex">
           <div className="flex flex-col space-y-2 text-center">
-            <TypographyP2
-              className="text-sm text-white"
-              text="“This library has saved me countless hours of work and helped me deliver stunning designs to my clients faster than ever before.”"
-            />
+            <TypographyP2 className="text-sm text-white">
+              This library has saved me countless hours of work and helped me
+              deliver stunning designs to my clients faster than ever before.
+            </TypographyP2>
           </div>
         </div>
         {/* Right Side */}
