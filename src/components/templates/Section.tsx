@@ -33,24 +33,22 @@ export const SelectionGroup = () => {
         {options.map((option, ind) => {
           const selected = selectedOptions.includes(option);
           return (
-            <>
-              <CheckBoxButton
-                variation="checkbox"
-                classname={clsx(
-                  'min-w-[250px] flex-1  whitespace-nowrap p-3',
-                  selected && 'bg-gray-200/20'
-                )}
-                key={option + ind}
-                onSelect={() => {
-                  handleSelection(option);
-                }}
-              >
-                <div className={clsx('flex items-center justify-between')}>
-                  <h3 className="invert"> {option}</h3>
-                  {selected && <CheckIcon color="white" />}
-                </div>
-              </CheckBoxButton>
-            </>
+            <CheckBoxButton
+              variation="checkbox"
+              classname={clsx(
+                'min-w-[250px] flex-1  whitespace-nowrap p-3',
+                selected && 'bg-gray-200/20'
+              )}
+              key={option + ind}
+              onSelect={() => {
+                handleSelection(option);
+              }}
+            >
+              <div className={clsx('flex items-center justify-between')}>
+                <h3 className="invert"> {option}</h3>
+                {selected && <CheckIcon color="white" />}
+              </div>
+            </CheckBoxButton>
           );
         })}
       </div>

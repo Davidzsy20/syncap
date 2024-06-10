@@ -127,19 +127,19 @@ const UserInquiry = () => {
                 name="ltmRevenueRange"
                 control={control}
                 rules={{ required: true }}
-                render={({ field }) => (
+                render={({ field }: any) => (
                   <DropdownInput
                     {...field}
                     className="mt-2 block w-full"
                     required
+                    defaultValue={'Please select'}
                   >
-                    <option value="" className="text-gray-500">
-                      Please select
-                    </option>
                     <option value="Pre-Revenue">Pre-Revenue</option>
                     <option value="$0-$5M">$0-$5M</option>
                     <option value="$5M-$25M">$5M-$25M</option>
-                    <option value="$10M-$50M">$10M-$50M</option>
+                    <option value="$10M-$50M" selected>
+                      $10M-$50M
+                    </option>
                     <option value="$20M-$100M">$20M-$100M</option>
                     <option value="$50M-$250M">$50M-$250M</option>
                   </DropdownInput>
@@ -152,7 +152,7 @@ const UserInquiry = () => {
                 name="ltmNetProfitRange"
                 control={control}
                 rules={{ required: true }}
-                render={({ field }) => (
+                render={({ field }: any) => (
                   <DropdownInput
                     {...field}
                     className="mt-2 block w-full"
@@ -183,7 +183,7 @@ const UserInquiry = () => {
               name="searchFundStructure"
               control={control}
               rules={{ required: true }}
-              render={({ field }) => (
+              render={({ field }: any) => (
                 <DropdownInput
                   {...field}
                   className="mt-2 block w-full"
@@ -210,7 +210,7 @@ const UserInquiry = () => {
               name="role"
               control={control}
               rules={{ required: true }}
-              render={({ field }) => (
+              render={({ field }: any) => (
                 <DropdownInput
                   {...field}
                   className="mt-2 block w-full"
@@ -253,7 +253,7 @@ const UserInquiry = () => {
               name="firstName"
               control={control}
               rules={{ required: true }}
-              render={({ field }) => (
+              render={({ field }: any) => (
                 <Input {...field} placeholder="First Name" required />
               )}
             />
@@ -264,7 +264,7 @@ const UserInquiry = () => {
               name="lastName"
               control={control}
               rules={{ required: true }}
-              render={({ field }) => (
+              render={({ field }: any) => (
                 <Input {...field} placeholder="Last Name" required />
               )}
             />
@@ -276,7 +276,7 @@ const UserInquiry = () => {
             name="companyName"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <Input {...field} placeholder="Required" required />
             )}
           />
@@ -287,7 +287,7 @@ const UserInquiry = () => {
             name="email"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <Input
                 {...field}
                 placeholder="example@example.com"
@@ -303,7 +303,7 @@ const UserInquiry = () => {
             name="phoneNumber"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <Input {...field} placeholder="Required" required />
             )}
           />
@@ -314,7 +314,7 @@ const UserInquiry = () => {
             name="companyType"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <DropdownInput
                 {...field}
                 className="mt-2 block w-full"
@@ -344,7 +344,7 @@ const UserInquiry = () => {
                 name="interestInSyncap"
                 control={control}
                 rules={{ required: true }}
-                render={({ field }) => (
+                render={({ field }: any) => (
                   <DropdownInput
                     {...field}
                     className="mt-2 block w-full"
@@ -371,7 +371,7 @@ const UserInquiry = () => {
             name="country"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <DropdownInput {...field} className="mt-2 block w-full" required>
                 <option value="" className="text-gray-500">
                   Please select
@@ -391,7 +391,7 @@ const UserInquiry = () => {
             name="howDidYouHearAboutUs"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => (
+            render={({ field }: any) => (
               <Input {...field} placeholder="Required" required />
             )}
           />
