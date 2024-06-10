@@ -160,14 +160,14 @@ const UserInquiry = () => {
                     {...field}
                     className="mt-2 block w-full"
                     required
+                    defaultValue={'Please select'}
                   >
-                    <option value="" className="text-gray-500">
-                      Please select
-                    </option>
                     <option value="Pre-Revenue">Pre-Revenue</option>
                     <option value="$0-$5M">$0-$5M</option>
                     <option value="$5M-$25M">$5M-$25M</option>
-                    <option value="$10M-$50M">$10M-$50M</option>
+                    <option value="$10M-$50M" selected>
+                      $10M-$50M
+                    </option>
                     <option value="$20M-$100M">$20M-$100M</option>
                     <option value="$50M-$250M">$50M-$250M</option>
                   </DropdownInput>

@@ -1,4 +1,4 @@
-import { HeaderLogo } from '@/components/Header';
+import { HeaderLogo } from '../Header';
 
 export const FormLayout = ({ children }: any) => {
   return (

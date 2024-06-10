@@ -48,9 +48,6 @@ const DropdownInput = React.forwardRef<HTMLSelectElement, DropdownInputProps>(
           ref={ref}
           {...props}
         >
-          <option value="" disabled selected hidden className="text-gray-500">
-            Please select
-          </option>
           {children}
         </select>
         {helpText && (
