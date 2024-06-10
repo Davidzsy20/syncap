@@ -11,7 +11,7 @@ const IntegrationAndSecurity = () => (
       }
     >
       <img
-        src="/assets/images/seamless_integration.png"
+        src="/assets/images/seamless-integration.png"
         alt="Seamless Integration with Your Existing Workflow"
         className="aspect-ratio max-h-[284px]"
       />

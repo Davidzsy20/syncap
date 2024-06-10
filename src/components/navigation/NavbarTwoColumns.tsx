@@ -39,7 +39,7 @@ const NavbarTwoColumns = (props: INavbarProps) => {
 
   return (
     <div className="z-80 flex w-full items-center justify-between py-4">
-      <Link href="/" className="w-28">
+      <Link href="/" className="flex w-28 items-center justify-center">
         {props.logo}
       </Link>
       <div className="hidden items-center gap-5 whitespace-nowrap font-medium text-gray-800 md:flex">

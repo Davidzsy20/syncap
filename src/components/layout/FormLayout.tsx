@@ -2,7 +2,7 @@ import { HeaderLogo } from '@/components/Header';
 
 export const FormLayout = ({ children }: any) => {
   return (
-    <div className="pb-10">
+    <div className="px-8">
       <HeaderLogo />
       {children}
     </div>

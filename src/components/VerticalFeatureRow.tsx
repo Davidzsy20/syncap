@@ -2,6 +2,8 @@ import className from 'classnames';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
+import { TypographyP2 } from './Text';
+
 export function useIsVisible(ref: any) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -29,52 +31,30 @@ type IVerticalFeatureRowProps = {
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  // const [show, setShow] = useState(false);
   const show = useIsVisible(ref);
-  // useLayoutEffect(() => {
-  //   const topPos = ref?.current?.getBoundingClientRect().top || 0;
-  //   const onScroll = () => {
-  //     const scrollPos = window.scrollY + window.innerHeight;
-  //     console.log(scrollPos, topPos, show);
-  //     if (topPos < scrollPos) {
-  //       setShow(true);
-  //     }
-  //   };
-  //   window.addEventListener('scroll', onScroll);
-
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // }, []);
-
   const router = useRouter();
 
   return (
     <div
       className={className(
-        'my-20',
-        'flex',
-        'flex-wrap',
-        'items-center',
-        'transition-all',
-        'duration-700',
-        'ease-in',
-
-        {
-          'flex-row-reverse': props.reverse,
-        },
+        'my-20 flex flex-col lg:flex-row items-center gap-y-12 lg:gap-x-8 transition-all duration-700 ease-in',
+        props.reverse ? 'lg:flex-row-reverse' : '',
         show ? 'opacity-100' : 'opacity-10 translate-y-20'
       )}
       ref={ref}
     >
-      <div className="w-full text-left sm:w-1/2">
-        <h3 className="text-2xl font-semibold text-gray-900 md:text-3xl">
+      <div className="flex max-w-[512px] flex-col items-center text-black text-opacity-50 lg:w-1/2">
+        <h3 className="text-balance text-center text-2xl font-semibold md:text-3xl lg:text-left">
           {props.title}
         </h3>
-        <div className="mt-6 text-lg leading-9 md:text-xl">
-          {props.description}
-        </div>
+        <TypographyP2>{props.description}</TypographyP2>
       </div>
-      <div className="w-full p-6 sm:w-1/2 md:pl-16">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+      <div className="w-full lg:w-1/2">
+        <img
+          className="aspect-ratio w-full"
+          src={`${router.basePath}${props.image}`}
+          alt={props.imageAlt}
+        />
       </div>
     </div>
   );

@@ -82,7 +82,7 @@ export const OurServicesSection = () => {
               className="flex flex-nowrap items-center whitespace-nowrap"
               variant="secondary"
             >
-              <p className="font-medium">Schedule an Initial Consultation</p>
+              <p className="font-medium">Schedule a Free Consultation</p>
               <ArrowTopRightIcon className="ml-1" />
             </Button>
           </Link>

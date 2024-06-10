@@ -11,23 +11,23 @@ const Banner = () => (
       title={
         <>
           <h2 className="font-semibold">
-            Learn How Syncap Can Be Your Strategic Growth Partner
+            Transformative Experience Leads to Higher Altitude
           </h2>
         </>
       }
-      subtitle="Whether you are ready to sell, raise, or looking for answers, we’ll guide you with data and expertise specific to your industry"
+      subtitle="Whether you are ready to sell, raise, or looking for answers, we’ll guide you with data-driven insights specific to your industry"
       button={
         <Button
           className="flex items-center whitespace-nowrap"
           variant="primary"
         >
-          <Link href="/form/userInquiry">
-            <p className="font-medium">Schedule an Initial Consultation</p>
+          <Link href="/form/userInquiry" className="flex flex-nowrap">
+            <p className="font-medium">Schedule a Free Consultation</p>
             <ArrowTopRightIcon className="ml-1" />
           </Link>
         </Button>
       }
-      image="/assets/images/bannerCTA.png"
+      image="/assets/images/footerCTA.png"
       imageAlt="Learn How Syncap Can Be Your Strategic Growth Partner"
     />
   </Section>

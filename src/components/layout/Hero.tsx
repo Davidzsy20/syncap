@@ -2,7 +2,7 @@ import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import type { ReactNode } from 'react';
 
 import { Button } from '@/components/Button';
-import { TypographyB2 } from '@/components/Text';
+import { TypographyB2, TypographyP1 } from '@/components/Text';
 
 import { Background } from '../Background';
 import { Section } from './Section';
@@ -31,10 +31,10 @@ const Hero = ({
       <div
         className={`flex flex-col ${layout === 'horizontal' ? 'items-center text-center lg:flex-row lg:pb-20 lg:text-left' : ''}`}
       >
-        <div className="flex-1">
+        <div className="flex-1 text-balance">
           {title}
-          {description}
-          <Button className="mx-auto mt-4 lg:mx-0">
+          <TypographyP1 className="mt-4">{description}</TypographyP1>
+          <Button className="mx-auto mt-8 lg:mx-0">
             <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center">
                 <TypographyB2 className="text-primary-1050" text={buttonText} />

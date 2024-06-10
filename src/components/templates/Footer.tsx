@@ -71,17 +71,6 @@ const Footer = () => (
                 </Link>
               </div>
             </div>
-            {/* <div className="flex-1">
-            <h1 className="mb-4 font-medium">Company</h1>
-            <div className="flex flex-col gap-2">
-              <Link href="/about">
-                <p>About Us</p>
-              </Link>
-              <Link href="/connect">
-                <p>Connect</p>
-              </Link>
-            </div>
-          </div> */}
           </div>
         </div>
       </div>
