@@ -96,35 +96,7 @@ const UserInquiry = () => {
     Other: [],
   };
 
-  const countryOptions = [
-    'United States',
-    'Argentina',
-    'Belgium',
-    'Bolivia',
-    'Brazil',
-    'Canada',
-    'Chile',
-    'Colombia',
-    'Costa Rica',
-    'Dominican Republic',
-    'Ecuador',
-    'El Salvador',
-    'France',
-    'Germany',
-    'Guatemala',
-    'Haiti',
-    'Honduras',
-    'Hong Kong',
-    'Luxembourg',
-    'Mexico',
-    'Monaco',
-    'Netherlands',
-    'Other',
-    'Peru',
-    'Singapore',
-    'Switzerland',
-    'United Kingdom',
-  ];
+  const countryOptions = ['United States', 'Canada', 'United Kingdom', 'Other'];
 
   const onSubmit = async (data: FormData) => {
     try {
