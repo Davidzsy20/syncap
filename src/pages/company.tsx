@@ -1,7 +1,7 @@
-import LandingLayout from '@/components/layout/LandingLayout';
+import { UserInquiryForm } from '@/components/form/Forms';
 
 const Company = () => {
-  return <LandingLayout>Company</LandingLayout>;
+  return <UserInquiryForm />;
 };
 
 export default Company;

@@ -24,6 +24,7 @@ export const CheckBox = ({ label, selected, onSelect, className }: any) => {
   );
 };
 
+// add svg icon
 export const CheckBoxButton = ({ classname, children, onSelect }: any) => {
   return (
     <Button className={cn(classname)} variant={'checkbox'} onClick={onSelect}>

@@ -25,7 +25,7 @@ const Navbar = () => (
           className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"
         />
       </Link>
-      <Link href="/connect">
+      <Link href="/refer-a-business">
         <TypographyH6
           text="Refer a Business"
           className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"

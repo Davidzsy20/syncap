@@ -6,11 +6,24 @@ interface TypographyProps {
   children?: any;
 }
 
+export function TypographyH1(props: TypographyProps) {
+  return (
+    <div
+      className={clsx(
+        'headerFont scroll-m-20 text-xl font-medium leading-tight tracking-tight lg:text-2xl',
+        props.className
+      )}
+    >
+      {props.text} {props.children}
+    </div>
+  );
+}
+
 export function TypographyH2(props: TypographyProps) {
   return (
     <div
       className={clsx(
-        'scroll-m-20 text-3xl font-medium leading-tight tracking-tight lg:text-4xl',
+        'headerFont scroll-m-20 text-3xl font-medium leading-tight tracking-tight lg:text-4xl',
         props.className
       )}
     >
@@ -23,20 +36,7 @@ export function TypographyH3(props: TypographyProps) {
   return (
     <div
       className={clsx(
-        'scroll-m-20 text-4xl font-medium leading-tight tracking-tight lg:text-5xl',
-        props.className
-      )}
-    >
-      {props.text} {props.children}
-    </div>
-  );
-}
-
-export function TypographyH4(props: TypographyProps) {
-  return (
-    <div
-      className={clsx(
-        'scroll-m-20 text-4xl tracking-tight lg:text-5xl',
+        'headerFont scroll-m-20 text-4xl font-medium leading-tight tracking-tight lg:text-5xl',
         props.className
       )}
     >

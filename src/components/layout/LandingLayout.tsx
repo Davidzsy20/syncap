@@ -6,7 +6,7 @@ interface ProsType {
 }
 const LandingLayout = ({ children }: ProsType) => {
   return (
-    <div className="text-gray-700 antialiased">
+    <div className="flex h-screen flex-col text-gray-700 antialiased">
       <Navbar />
       {children}
       <Footer />

@@ -38,6 +38,11 @@ p {
   font-size: 14px;
 }
 
+.headerFont {
+  font-family: $h-font-family;
+  color: $primary-text-color
+}
+
 div {
   font-family: $futura-font-family;
   font-weight: 400;
