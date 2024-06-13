@@ -1,7 +1,7 @@
-import LandingLayout from '@/components/layout/LandingLayout';
+import { UserInquiryForm } from '@/components/form/Forms';
 
 const Connect = () => {
-  return <LandingLayout>Connect</LandingLayout>;
+  return <UserInquiryForm />;
 };
 
 export default Connect;
