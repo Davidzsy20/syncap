@@ -21,8 +21,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {helpText && (
-          <div className="mt-1 flex justify-between text-sm text-gray-700">
-            <span>{helpText}</span>
+          <div className="mt-1 flex justify-between text-sm text-red-700">
+            {helpText}
           </div>
         )}
       </div>

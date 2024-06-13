@@ -4,7 +4,7 @@ import { Background } from '../Background';
 import { Section } from '../layout/Section';
 
 const Footer = () => (
-  <Background color="bg-primary-10" className="inset-x-0 bottom-0">
+  <Background color="bg-primary-10" className="inset-x-0 bottom-0 flex-1">
     <Section yPadding="py-16">
       <div className="flex w-full justify-between py-5">
         <div className="flex flex-col gap-10">

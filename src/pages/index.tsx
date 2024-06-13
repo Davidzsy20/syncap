@@ -54,7 +54,7 @@ const EfficiencyPropsSection = () => (
         description="Streamline document exchanges and scheduling coordination with proprietary communication management tools"
       />
       <EfficiencyBlock
-        title="Accelerate Transaction Closing"
+        title="Accelerated Transaction Closing"
         description="Accelerate deal cycles with enhanced due diligence, outreach management, and streamlined feedback communication"
       />
       <EfficiencyBlock
