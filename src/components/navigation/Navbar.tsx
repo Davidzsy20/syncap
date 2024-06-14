@@ -13,12 +13,12 @@ const Navbar = () => (
   <Section yPadding="py-6">
     <NavbarTwoColumns logo={<Logo />}>
       <NavbarMenu />
-      <Link href="/pricing">
+      {/* <Link href="/pricing">
         <TypographyH6
           text="Pricing"
           className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"
         />
-      </Link>
+      </Link> */}
       <Link href="/company">
         <TypographyH6
           text="Company"
