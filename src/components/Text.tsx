@@ -101,10 +101,7 @@ export function TypographyP1(props: TypographyProps) {
 export function TypographyP2(props: TypographyProps) {
   return (
     <div
-      className={clsx(
-        props.className,
-        'text-lg leading-7 lg:text-xl [&:not(:first-child)]:mt-6'
-      )}
+      className={clsx(props.className, 'text-base [&:not(:first-child)]:mt-6')}
     >
       {props.text}
       {props.children}

@@ -168,7 +168,7 @@ export const UserInquiryForm = () => {
       className="mx-auto flex max-w-[700px] flex-col gap-4"
     >
       {renderFields(inquiryFormSchema)}
-      <Button variant="solid" className="mt-6 text-lg">
+      <Button variant="solid" className="mt-6">
         Complete
       </Button>
     </form>
