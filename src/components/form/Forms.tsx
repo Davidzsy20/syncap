@@ -7,7 +7,7 @@ import { DropdownInput, Input } from '@/components/Input';
 import { FormLayout } from '@/components/layout/FormLayout';
 import { TypographyH2, TypographyP2 } from '@/components/Text';
 
-import { inquiryFormSchema, interestOptions } from './formSchema';
+import { inquiryFormSchema } from './formSchema';
 
 interface FormData {
   firstName: string;
@@ -27,9 +27,9 @@ interface FormData {
 }
 
 export const UserInquiryForm = () => {
-  const { handleSubmit, control, watch, setError } = useForm<FormData>();
+  const { handleSubmit, control, setError } = useForm<FormData>();
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const companyType = watch('companyType');
+  // const companyType = watch('companyType');
 
   const onSubmit = async (data: FormData) => {
     try {
@@ -86,13 +86,13 @@ export const UserInquiryForm = () => {
     return fields.map((field) => {
       const localField = { ...field }; // Create a local copy of the field
 
-      if (localField.name === 'interestInSyncap' && companyType) {
-        localField.options = interestOptions[companyType] || [];
-      }
+      // if (localField.name === 'interestInSyncap' && companyType) {
+      //   localField.options = interestOptions[companyType] || [];
+      // }
 
       if (
-        localField.conditions &&
-        !localField.conditions.includes(companyType)
+        localField.conditions
+        // !localField.conditions.includes(companyType)
       ) {
         return null;
       }
