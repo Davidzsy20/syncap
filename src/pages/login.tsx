@@ -23,9 +23,13 @@ export default function LoginPage() {
         {/* Left Side */}
         <div className="hidden h-full w-2/5 flex-col justify-end bg-primary-1050/75 px-8 py-16 lg:flex">
           <div className="flex flex-col space-y-2 text-center">
-            <TypographyP2 className="text-sm text-white">
-              This library has saved me countless hours of work and helped me
-              deliver stunning designs to my clients faster than ever before.
+            <TypographyP2 className="text-white/75">
+              &quot;My model for business is The Beatles. They were four guys
+              who kept each other&apos;s kind of negative tendencies in check.
+              They balanced each other and the total was greater than the sum of
+              the parts. That&apos;s how I see business. Great things in
+              business are never done by one person. They&apos;re done by a team
+              of people.&quot; -- Steve Jobs
             </TypographyP2>
           </div>
         </div>
