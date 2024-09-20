@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
+  darkMode: ['selector'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -55,7 +55,15 @@ module.exports = {
           700: '#4a5568',
           800: '#2d3748',
           900: '#1a202c',
+          1000: '#4B4B4B',
           2000: '#001D1D',
+        },
+        secondary: {
+          DEFAULT: '#C8FF2B',
+        },
+        text: {
+          10: '#FFFFE3',
+          100: '#D1D0CB',
         },
       },
       lineHeight: {

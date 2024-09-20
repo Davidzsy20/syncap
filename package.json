@@ -38,10 +38,12 @@
     "react-transition-group": "^4.4.5",
     "sass": "^1.74.1",
     "shadcn-ui": "^0.2.3",
+    "sonner": "^1.5.0",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.1.0",

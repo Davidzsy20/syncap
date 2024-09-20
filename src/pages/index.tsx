@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import LandingLayout from '@/components/layout/LandingLayout';
 import { Meta } from '@/components/layout/Meta';
 import { Section } from '@/components/layout/Section';
@@ -5,8 +7,8 @@ import { Banner } from '@/components/templates/Banner';
 import { FourMainFeatures } from '@/components/templates/FourMainFeatures';
 import { HomepageHero } from '@/components/templates/HeroSections';
 import { IntegrationAndSecurity } from '@/components/templates/IntegrationAndSecurity';
-import { OurServicesSection } from '@/components/templates/Section';
-import { TypographyP1 } from '@/components/Text';
+import { OptInSection } from '@/components/templates/Section';
+import { TypographyH6, TypographyP1 } from '@/components/Text';
 import { AppConfig } from '@/utils/AppConfig';
 
 interface Prop {
@@ -36,21 +38,26 @@ export const EfficiencyBlock: React.FC<{
   percentage?: string;
   title: string;
   description: string;
-}> = ({ percentage, title, description }) => {
+  dark?: boolean;
+}> = ({ percentage, title, description, dark = true }) => {
   return (
-    <div className="flex flex-1 flex-col items-center bg-primary-1050 p-6 text-center text-white">
+    <div className="grow-1 flex flex-col items-center bg-primary-1050 p-6 text-center">
       <span className="text-4xl font-bold lg:text-6xl">{percentage}</span>
-      <p className="mt-4 text-xl font-semibold text-white">{title}</p>
-      <p className="mt-2 text-primary-200">{description}</p>
+      <TypographyH6 className={clsx(dark ? 'invert' : '', 'text-nowrap')}>
+        {title}
+      </TypographyH6>
+      <TypographyP1 className={clsx(dark ? 'invert' : '', '"mt-2 text-left')}>
+        {description}
+      </TypographyP1>
     </div>
   );
 };
 
 const EfficiencyPropsSection = () => (
-  <Section bgColor="primary-1050" yPadding="py-16">
-    <div className="flex w-full flex-col divide-y lg:flex-row lg:divide-x lg:divide-y-0">
+  <Section bgColor="primary-1050" yPadding="py-16 w-full">
+    <div className="flex w-full flex-col divide-y lg:flex-row  lg:divide-y-0">
       <EfficiencyBlock
-        title="Minimal Business Disruption to Your Business"
+        title="Minimal Operational Disruption"
         description="Streamline document exchanges and scheduling coordination with proprietary communication management tools"
       />
       <EfficiencyBlock
@@ -69,7 +76,7 @@ const Index = () => (
   <LandingLayout>
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <HomepageHero />
-    <OurServicesSection />
+    <OptInSection />
     <Section
       yPadding="py-16"
       title={

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -10,11 +11,20 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, helpText, ...props }, ref) => {
     return (
-      <div className="relative flex w-full flex-col">
+      <div className="relative flex flex-col">
+        <label
+          htmlFor={props.id}
+          className={clsx(
+            props.value ? 'opacity-100' : 'opacity-0',
+            'text-sm font-medium text-gray-700 transition-all duration-200 ease-in-out'
+          )}
+        >
+          {props.placeholder}
+        </label>
         <input
           type={type}
           className={cn(
-            'border-b border-gray-700 bg-transparent px-3 py-2 text-base text-gray-700 placeholder:text-gray-700 focus:text-primary-2000 focus:border-primary-2000 focus:outline-none',
+            'border-b border-gray-700 bg-transparent px-3 py-2 text-base text-gray-700 placeholder:text-gray-500 focus:text-primary-2000 focus:border-primary-2000 focus:outline-none',
             className
           )}
           ref={ref}

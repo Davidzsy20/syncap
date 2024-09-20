@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '../Button';
 import { CTABanner } from '../CTABanner';
 import { Section } from '../layout/Section';
+import { TypographyP2 } from '../Text';
 
 const Banner = () => (
   <Section>
@@ -22,7 +23,9 @@ const Banner = () => (
           variant="primary"
         >
           <Link href="/form/userInquiry" className="flex flex-nowrap">
-            <p className="font-medium">Schedule a Free Consultation</p>
+            <TypographyP2 className="font-medium">
+              Schedule a Free Consultation
+            </TypographyP2>
             <ArrowTopRightIcon className="ml-1" />
           </Link>
         </Button>

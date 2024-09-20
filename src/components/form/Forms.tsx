@@ -84,24 +84,14 @@ export const UserInquiryForm = () => {
 
   const renderFields = (fields: any[]) => {
     return fields.map((field) => {
-      const localField = { ...field }; // Create a local copy of the field
-
-      // if (localField.name === 'interestInSyncap' && companyType) {
-      //   localField.options = interestOptions[companyType] || [];
-      // }
-
-      if (
-        localField.conditions
-        // !localField.conditions.includes(companyType)
-      ) {
-        return null;
-      }
-
       return (
-        <div key={field.name} className="mb-4">
-          <TypographyP2>
+        <div
+          key={field.name}
+          className="mb-4 min-w-[300px] shrink-0 grow-0 basis-[calc(50%-8px)]"
+        >
+          {/* <TypographyP2>
             {field.label} {field.validation.required && '*'}
-          </TypographyP2>
+          </TypographyP2> */}
           <Controller
             name={field.name}
             control={control}
@@ -126,6 +116,7 @@ export const UserInquiryForm = () => {
                 </DropdownInput>
               ) : (
                 <Input
+                  // className="w-full"
                   {...controllerField}
                   placeholder={field.placeholder}
                   type={field.type}
@@ -143,7 +134,9 @@ export const UserInquiryForm = () => {
   const header = submitted ? (
     <TypographyH2 className="w-full text-center">Thank You!</TypographyH2>
   ) : (
-    <TypographyH2 className="w-full text-center">Join Syncap</TypographyH2>
+    <TypographyH2 className="w-full text-center">
+      Great! Let’s connect over your business goals.
+    </TypographyH2>
   );
   const description = submitted ? (
     <>
@@ -158,19 +151,27 @@ export const UserInquiryForm = () => {
     </>
   ) : (
     <TypographyP2 className="w-full text-center">
-      Once you submit your information below, you can expect next steps for
-      becoming a Syncap member.
+      Once you submit your information below, you can expect to speak with us to
+      discuss your objectives.
     </TypographyP2>
   );
   const content = !submitted && (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mx-auto flex max-w-[700px] flex-col gap-4"
+      className=" flex max-w-[880px] flex-wrap"
     >
-      {renderFields(inquiryFormSchema)}
-      <Button variant="solid" className="mt-6">
-        Complete
-      </Button>
+      <div className="flex w-full flex-wrap gap-4">
+        {renderFields(inquiryFormSchema)}
+        {/* <TypographyP0 className="text-text-100">
+          if you are not ready to proceed with speaking, we can put your
+          information in record and we will followup to schedule the call with
+          you at your best convience
+        </TypographyP0> */}
+
+        <Button variant="solid" className="ml-auto mt-6 w-1/2">
+          Continue
+        </Button>
+      </div>
     </form>
   );
 

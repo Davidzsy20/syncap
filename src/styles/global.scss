@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Clash+Display&family=General+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=General+Sans:wght@400;500;700&family=Futura+PT:wght@400;500;700&display=swap");
 $primary-text-title-color: theme("colors.gray.2000");
 $primary-text-color: theme("colors.gray.2000");
 // Define font families
 $futura-font-family: "Futura PT", "Helvetica Neue", Arial, sans-serif;
-$h-font-family: "Clash Display", "Times New Roman", Times, serif;
+$h-font-family:  "Clash Display", sans-serif;
 $p-font-family: "General Sans", "Arial", sans-serif;
 @layer base {
   :root {
@@ -18,6 +17,9 @@ $p-font-family: "General Sans", "Arial", sans-serif;
     --color-primary: 255, 115, 179;
   }
 }
+:root:has(.no-scroll) {
+  overflow:hidden;
+}
 // .primary-p{
 //   @apply
 // }
@@ -29,7 +31,7 @@ h5,
 h6 {
   font-family: $h-font-family;
   color: $primary-text-title-color;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 p {
@@ -40,7 +42,8 @@ p {
 
 .headerFont {
   font-family: $h-font-family;
-  color: $primary-text-color
+  color: $primary-text-color;
+  font-weight: 500;
 }
 
 div {

@@ -81,19 +81,19 @@ const Button = (props: IButtonProps) => {
     <button
       onClick={onClick}
       className={clsx(
-        'w-fit cursor-pointer rounded-sm px-4 py-3',
+        'cursor-pointer rounded-sm px-4 py-3 ',
         className,
         variant === 'primary'
           ? 'border border-black hover:bg-gray-100 focus:ring focus:ring-primary-600 active:bg-gray-600'
           : '',
         variant === 'secondary'
-          ? 'bg-primary-200 hover:bg-primary-300 focus:ring focus:ring-primary-100 active:bg-primary-400'
+          ? 'bg-primary-200 hover:brightness-110 focus:ring focus:ring-primary-100 active:bg-primary-200'
           : '',
         variant === 'outline'
           ? 'border-gray border-primary-1050 text-primary-1050 hover:border-gray-500  focus:ring-primary-1050 active:border-gray-600'
           : '',
         variant === 'checkbox'
-          ? 'hover:border-invert focus:ring-offset cursor-pointer border hover:border-gray-500 focus:ring focus:ring-gray-500 active:border-gray-600'
+          ? 'hover:border-invert focus:ring-offset cursor-pointer border border-gray-500/20 hover:border-gray-500 focus:ring focus:ring-gray-500 active:border-gray-600'
           : '',
         variant === 'solid'
           ? 'focus:ring-offset bg-primary-1050 text-gray-100 hover:bg-primary-900 focus:ring-primary-500 active:bg-primary-800'

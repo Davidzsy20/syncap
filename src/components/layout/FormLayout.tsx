@@ -15,9 +15,9 @@ export const FormLayout = ({
   content,
 }: FormLayoutProps) => {
   return (
-    <div className="px-8">
+    <div className="mx-auto max-w-[880px] ">
       <HeaderLogo />
-      <div className="mb-8 text-center">
+      <div className="mx--auto mb-8">
         {header}
         {description}
       </div>

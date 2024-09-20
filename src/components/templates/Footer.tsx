@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { Background } from '../Background';
 import { Section } from '../layout/Section';
+import { TypographyH6, TypographyP1 } from '../Text';
 
 const Footer = () => (
   <Background color="bg-primary-10" className="inset-x-0 bottom-0 flex-1">
@@ -14,14 +15,14 @@ const Footer = () => (
             className="w-28"
           />
           <div className="flex flex-col gap-2">
-            <p>© 2024 Syncap. All rights reserved</p>
+            <TypographyP1>© 2024 Syncap. All rights reserved</TypographyP1>
             <span className="flex gap-2">
               <Link href="/termsofservice">
-                <p>Terms of Service</p>
+                <TypographyP1>Terms of Service</TypographyP1>
               </Link>
               |
               <Link href="/privacy">
-                <p>Privacy Policy</p>
+                <TypographyP1>Privacy Policy</TypographyP1>
               </Link>
             </span>
           </div>
@@ -29,45 +30,45 @@ const Footer = () => (
         {/* Right */}
         <div className="flex flex-col gap-5 whitespace-nowrap lg:flex-row lg:gap-12">
           <div className="flex-1">
-            <h1 className="mb-4 font-medium">Solutions</h1>
+            <TypographyH6 className="mb-4 font-medium">Solutions</TypographyH6>
             <div className="flex flex-col gap-2">
               <Link href="/platform/owners">
-                <p>Selling a Company</p>
+                <TypographyP1>Selling a Company</TypographyP1>
               </Link>
               <Link href="/platform/advisors">
-                <p>Buying a Company</p>
+                <TypographyP1>Buying a Company</TypographyP1>
               </Link>
               <Link href="/platform/buyers-investors">
-                <p>Raising Capital</p>
+                <TypographyP1>Raising Capital</TypographyP1>
               </Link>
             </div>
           </div>
           <div className="flex-1">
-            <h1 className="mb-4 font-medium">Platform</h1>
+            <TypographyH6 className="mb-4 font-medium">Platform</TypographyH6>
             <div className="flex flex-col gap-2">
               <Link href="/platform/owners">
-                <p>Business Owners</p>
+                <TypographyP1>Business Owners</TypographyP1>
               </Link>
               <Link href="/platform/advisors">
-                <p>Advisors</p>
+                <TypographyP1>Advisors</TypographyP1>
               </Link>
               <Link href="/platform/buyers-investors">
-                <p>Buyers & Investors</p>
+                <TypographyP1>Buyers & Investors</TypographyP1>
               </Link>
               <Link href="/platform/intermediaries">
-                <p>Intermediaries</p>
+                <TypographyP1>Intermediaries</TypographyP1>
               </Link>
             </div>
           </div>
           <div className="flex gap-5 whitespace-nowrap lg:gap-8">
             <div className="flex-1">
-              <h1 className="mb-4 font-medium">Legal</h1>
+              <TypographyH6 className="mb-4 font-medium">Legal</TypographyH6>
               <div className="flex flex-col gap-2">
                 <Link href="/termsofservice">
-                  <p>Terms of Service</p>
+                  <TypographyP1>Terms of Service</TypographyP1>
                 </Link>
                 <Link href="/privacy">
-                  <p>Privacy Policy</p>
+                  <TypographyP1>Privacy Policy</TypographyP1>
                 </Link>
               </div>
             </div>
