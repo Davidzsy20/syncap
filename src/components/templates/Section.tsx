@@ -236,7 +236,7 @@ export const OptInSection = () => {
           label="I would like to receive a complimentary preliminary valuation assessment report."
         />
         <div className="mt-10 flex justify-start">
-          <div className="flex gap-2 pb-1">
+          <div className="flex flex-wrap gap-2 pb-1">
             <Input
               className="w-[350px] border-white text-text-100"
               placeholder="Enter business email"
