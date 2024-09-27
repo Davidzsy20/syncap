@@ -61,6 +61,9 @@ module.exports = {
         secondary: {
           DEFAULT: '#C8FF2B',
         },
+        warning: {
+          DEFAULT: '#FFFEE',
+        },
         text: {
           10: '#FFFFE3',
           100: '#D1D0CB',

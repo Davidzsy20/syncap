@@ -2,12 +2,8 @@ import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
 import { Button } from '@/components/Button';
-import {
-  TypographyB2,
-  TypographyH2,
-  TypographyH3,
-  TypographyP2,
-} from '@/components/Text';
+import { TypographyB2, TypographyH2, TypographyP2 } from '@/components/Text';
+import { landingPageBaseUrl } from '@/pages/_app';
 import { MeetingLink } from '@/utils/AppConfig';
 
 import { Background } from '../Background';
@@ -17,12 +13,12 @@ import { Section } from '../layout/Section';
 
 export const HomepageHero = () => (
   <Background color="bg-grey-100">
-    <Section yPadding="pt-10 md:pt-16">
+    <Section yPadding="pt-6 md:pt-8">
       <HeroOneButton
         title={
           <>
-            <TypographyH3 text="Supercharge Deal-making with" className="" />
-            <TypographyH3 text="AI-Powered Advisory Platform" className="" />
+            <TypographyH2 text="Supercharge Deal-making with" className="" />
+            <TypographyH2 text="AI-Powered Advisory Platform" className="" />
           </>
         }
         description={
@@ -35,7 +31,9 @@ export const HomepageHero = () => (
         }
         button={
           <Button className="mx-auto">
-            <Link href={'/form/userInquiry'}>
+            <Link
+              href={`${landingPageBaseUrl}/qualification/interested_in_syncap`}
+            >
               <div className="flex items-center">
                 <TypographyB2
                   className="text-primary-1050"

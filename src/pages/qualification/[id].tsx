@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 
 import { Button } from '@/components/Button';
 import {
@@ -11,7 +11,14 @@ import {
 } from '@/components/templates/Section';
 import { TypographyH5, TypographyH6 } from '@/components/Text';
 
-const calculateMaxDepth = (flow: any, nodeId = 'init', depth = 0) => {
+import type { DataContextType } from '../_app';
+import { DataContext } from '../_app';
+
+const calculateMaxDepth = (
+  flow: any,
+  nodeId = 'interest_in_syncap',
+  depth = 0
+) => {
   const node = flow[nodeId];
   if (!node || !node.options) return depth;
 
@@ -38,12 +45,12 @@ const getStepInfo = (flow: any, path: string[]) => {
 
 const QualificationPage = () => {
   const router = useRouter();
-  const { id: queryId = 'init' } = router.query;
+  const { id: queryId = 'interest_in_syncap' } = router.query;
   const [step, setStep] = useState<string>(
-    typeof queryId === 'string' ? queryId : 'init'
+    typeof queryId === 'string' ? queryId : 'interest_in_syncap'
   );
   const [path, setPath] = useState<string[]>([step]);
-
+  const { setData, data } = useContext(DataContext) as DataContextType;
   useEffect(() => {
     if (typeof queryId === 'string') {
       setStep(queryId);
@@ -56,13 +63,17 @@ const QualificationPage = () => {
     if (!stepData) return null;
     const { options, text, id, prev } = stepData as any;
 
+    if (step === 'interest_in_syncap') {
+      return <OptInSection />;
+    }
+
+    // if (step === 'inquiry_form') {
+    //   return <UserInquiryForm />;
+    // }
+
     if (!options?.length) {
       router.push(`/qualification/${id}`);
       return null;
-    }
-
-    if (step === 'init') {
-      return <OptInSection />;
     }
 
     return (
@@ -73,6 +84,13 @@ const QualificationPage = () => {
           onSelect={(option: any) => {
             const nextStep = option.next;
             setStep(nextStep);
+            setData({
+              ...data,
+              inquiry_form: {
+                ...data.inquiry_form,
+                [step]: option.text,
+              },
+            });
             setPath((prevState) => [...prevState, nextStep]);
             router.push(`/qualification/${nextStep}`);
           }}
@@ -101,7 +119,7 @@ const QualificationPage = () => {
     <div
       className={clsx(
         'z-50 mx-0 w-full bg-gray-1000',
-        step === 'init'
+        step === 'interest_in_syncap'
           ? 'h-full'
           : 'no-scroll fixed top-0 h-screen w-screen backdrop-blur'
       )}

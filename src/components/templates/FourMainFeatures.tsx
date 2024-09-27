@@ -1,5 +1,5 @@
 import { Section } from '../layout/Section';
-import { TypographyP1 } from '../Text';
+import { TypographyH2, TypographyP1 } from '../Text';
 import { VerticalFeatureRow } from '../VerticalFeatureRow';
 
 const FourMainFeatures = () => (
@@ -7,9 +7,9 @@ const FourMainFeatures = () => (
     yPadding="py-16"
     title={
       <>
-        <h2 className="text-balance">
+        <TypographyH2 className="text-balance">
           Industry-leading Platform Delivering Best-in-Class Advisory Experience
-        </h2>
+        </TypographyH2>
       </>
     }
     description="Syncap's platform leverages artificial intelligence and agentic workflow to streamline and optimize the entire M&A process, from deal sourcing and execution to due diligence and closing. Our end-to-end M&A tech stack enables Syncap to provide comprehensive, data-driven M&A advisory at an unprecedented scale for SMBs."

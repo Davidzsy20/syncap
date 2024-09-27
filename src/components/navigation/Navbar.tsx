@@ -32,7 +32,7 @@ const Navbar = () => (
         />
       </Link>
       <Button variant="solid">
-        <Link href="/login">
+        <Link href="https://workspace.syncap.ai/auth">
           <h1 className="font-normal text-gray-100">Member Sign In</h1>
         </Link>
       </Button>

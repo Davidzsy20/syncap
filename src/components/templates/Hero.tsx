@@ -2,7 +2,8 @@ import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 
 import { Button } from '@/components/Button';
-import { TypographyB2, TypographyH3, TypographyP1 } from '@/components/Text';
+import { TypographyB2, TypographyH2, TypographyP1 } from '@/components/Text';
+import { landingPageBaseUrl } from '@/pages/_app';
 
 import { Background } from '../Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
@@ -10,12 +11,12 @@ import { Section } from '../layout/Section';
 
 const Hero = () => (
   <Background color="bg-grey-100">
-    <Section yPadding=" py-6">
+    <Section yPadding="py-6">
       <HeroOneButton
         title={
           <>
-            <TypographyH3 text="Supercharge Deal-making with" className="" />
-            <TypographyH3 text="AI-Powered Advisory Platform" className="" />
+            <TypographyH2 text="Supercharge Deal-making with" className="" />
+            <TypographyH2 text="AI-Powered Advisory Platform" className="" />
           </>
         }
         description={
@@ -26,7 +27,9 @@ const Hero = () => (
         }
         button={
           <Button className="mx-auto" variant={'primary'}>
-            <Link href={'/form/userInquiry'}>
+            <Link
+              href={`${landingPageBaseUrl}/qualification/interested_in_syncap`}
+            >
               <a>
                 <div className="flex items-center">
                   <TypographyB2

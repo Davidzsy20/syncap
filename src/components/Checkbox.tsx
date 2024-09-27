@@ -8,8 +8,8 @@ export const CheckBox = ({ label, selected, onSelect, className }: any) => {
       <input
         onClick={onSelect}
         type="checkbox"
-        // checked={selected}
-        defaultChecked={selected}
+        checked={selected}
+        // defaultChecked={selected}
         className="form-checkbox custom-checkbox size-5 cursor-pointer rounded-sm border-black focus:ring-transparent"
       ></input>
       <div className="grid gap-1.5 leading-none">

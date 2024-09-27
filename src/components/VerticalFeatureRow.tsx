@@ -2,7 +2,7 @@ import className from 'classnames';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
-import { TypographyP2 } from './Text';
+import { TypographyH1, TypographyP2 } from './Text';
 
 export function useIsVisible(ref: any) {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -44,9 +44,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       ref={ref}
     >
       <div className="flex max-w-[512px] flex-col items-center text-black text-opacity-50 lg:w-1/2">
-        <h3 className="text-balance text-center text-2xl font-semibold md:text-3xl lg:text-left">
-          {props.title}
-        </h3>
+        <TypographyH1 className="text-balance ">{props.title}</TypographyH1>
         <TypographyP2>{props.description}</TypographyP2>
       </div>
       <div className="w-full lg:w-1/2">

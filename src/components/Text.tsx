@@ -76,7 +76,7 @@ export function TypographyP0(props: TypographyProps) {
   return (
     <div
       className={clsx(
-        'text-md lg:text-md pt-6 leading-tight tracking-tight',
+        'text-md lg:text-md leading-tight tracking-tight',
         props.className
       )}
     >

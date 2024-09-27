@@ -4,16 +4,16 @@ import Link from 'next/link';
 import { Button } from '../Button';
 import { CTABanner } from '../CTABanner';
 import { Section } from '../layout/Section';
-import { TypographyP2 } from '../Text';
+import { TypographyH2, TypographyP2 } from '../Text';
 
 const Banner = () => (
   <Section>
     <CTABanner
       title={
         <>
-          <h2 className="font-semibold">
+          <TypographyH2 className="">
             Transformative Experience Leads to Higher Altitude
-          </h2>
+          </TypographyH2>
         </>
       }
       subtitle="Whether you are ready to sell, raise, or looking for answers, we’ll guide you with data-driven insights specific to your industry"
@@ -22,7 +22,10 @@ const Banner = () => (
           className="flex items-center whitespace-nowrap"
           variant="primary"
         >
-          <Link href="/form/userInquiry" className="flex flex-nowrap">
+          <Link
+            href="/qualification/interest_in_syncap"
+            className="flex flex-nowrap"
+          >
             <TypographyP2 className="font-medium">
               Schedule a Free Consultation
             </TypographyP2>

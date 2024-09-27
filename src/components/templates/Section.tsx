@@ -2,20 +2,21 @@ import { ArrowTopRightIcon, CheckIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { useFormContext } from 'react-hook-form';
+import { useContext, useState } from 'react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { CheckBox, CheckBoxButton } from '@/components/Checkbox';
+import type { DataContextType } from '@/pages/_app';
+import { DataContext, workspaceBaseUrl } from '@/pages/_app';
 
 import { Button } from '../Button';
 import { Input } from '../Input';
-import { TypographyP1 } from '../Text';
+import { TypographyP1, TypographyP2 } from '../Text';
 
 export const optInFlow = {
-  init: {
-    id: 'init',
+  interest_in_syncap: {
+    id: 'interest_in_syncap',
     text: 'What would you like to know about?',
     options: [
       { text: 'Selling a Business', next: 'role' },
@@ -31,7 +32,7 @@ export const optInFlow = {
       { text: 'Investor', next: 'objectives_i' },
       { text: 'Professional Service / Specialist', next: 'objectives_p' },
     ],
-    prev: 'init',
+    prev: 'interest_in_syncap',
   },
   objectives_b: {
     id: 'objectives_b',
@@ -127,8 +128,8 @@ export const optInFlow = {
       { text: '251+', next: 'inquiry_form' },
     ],
   },
-  searchFundStructure: {
-    id: 'searchFundStructure',
+  search_fund_structure: {
+    id: 'search_fund_structure',
     text: 'What type of search fund structure do you use?',
     options: [
       { text: 'Traditional Model', next: 'inquiry_form' },
@@ -148,7 +149,7 @@ export const optInFlow = {
 export const MultiSelectionGroup = ({ options, onSelect, selections }: any) => {
   return (
     <div className="mb-4 mt-8 flex flex-col gap-2">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 lg:flex-row">
         {options.map((option: any, ind: number) => {
           const { text } = option;
           const selected = selections === option.text;
@@ -156,7 +157,7 @@ export const MultiSelectionGroup = ({ options, onSelect, selections }: any) => {
             <CheckBoxButton
               variation="checkbox"
               classname={clsx(
-                'min-w-[250px] whitespace-nowrap p-3',
+                'min-w-[250px] whitespace-nowrap p-3 lg:w-1/3',
                 selected && 'bg-gray-200/20'
               )}
               key={text + ind}
@@ -179,10 +180,8 @@ export const OptInSection = () => {
   const [withReport, setWithReport] = useState(false);
   const [email, setEmail] = useState('');
   const [selectedOptions, setSelectedOptions] = useState('');
-  const { setValue } = useFormContext();
+  const { setData, data } = useContext(DataContext) as DataContextType;
   const pathname = usePathname();
-  // const [step, setStep] = useState('init');
-  // const [path, setPath] = useState(['init']); // Track the path
   const router = useRouter();
   const handleClick = () => {
     const result = z.string().email().safeParse(email);
@@ -195,33 +194,38 @@ export const OptInSection = () => {
       return;
     }
 
-    setValue('inquiry_form', {
-      email,
-      withReport,
-      interested_service: selectedOptions,
+    setData({
+      ...data,
+      inquiry_form: {
+        company_email: email,
+        withReport,
+        interest_in_syncap: selectedOptions,
+      },
     });
 
-    router.push('/qualification/role');
+    router.push(
+      `${workspaceBaseUrl}/qualification/role?company_email=${email}&withReport=${withReport}&interest_in_syncap=${selectedOptions}`
+    );
   };
   return (
     <div
       className={clsx(
-        'z-50 mx-0 w-full bg-gray-1000',
-        pathname?.includes('/init') &&
+        'z-50 mx-0 w-full bg-primary-1050',
+        pathname?.includes('/interest_in_syncap') &&
           'no-scroll fixed top-0 h-screen w-screen backdrop-blur'
         // : 'h-screen w-screen backdrop-blur fixed top-0 no-scroll'
       )}
     >
       <div className="mx-auto w-full max-w-screen-lg p-8">
-        <h2 className="text-gray-100">
+        <TypographyP2 className="text-gray-100">
           Learn how Syncap can help you achieve your strategic objectives <br />
           with speed, control, and optimized value.
-        </h2>
+        </TypographyP2>
 
         <MultiSelectionGroup
           onSelect={(option: any) => setSelectedOptions(option.text)}
           selections={selectedOptions}
-          options={optInFlow.init.options}
+          options={optInFlow.interest_in_syncap.options}
         />
         <CheckBox
           onSelect={() => {
@@ -232,11 +236,14 @@ export const OptInSection = () => {
           label="I would like to receive a complimentary preliminary valuation assessment report."
         />
         <div className="mt-10 flex justify-start">
-          <div className="flex gap-2 border-b pb-1">
+          <div className="flex gap-2 pb-1">
             <Input
-              className="w-[350px] border-b-0 text-text-100"
-              placeholder="Enter work email to start"
+              className="w-[350px] border-white text-text-100"
+              placeholder="Enter business email"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              label="Company Email"
+              type="email"
             />
             <Button
               onClick={handleClick}

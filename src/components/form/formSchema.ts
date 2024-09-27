@@ -1,37 +1,45 @@
 export const inquiryFormSchema = [
   {
-    name: 'firstName',
+    name: 'first_name',
     label: 'First Name',
     type: 'text',
     placeholder: '*First Name',
     validation: { required: true },
   },
   {
-    name: 'lastName',
+    name: 'last_name',
     label: 'Last Name',
     type: 'text',
     placeholder: '*Last Name',
     validation: { required: true },
   },
   {
-    name: 'email',
+    name: 'company_email',
     label: 'Company Email',
     type: 'email',
     placeholder: '*Company Email',
     validation: { required: true },
   },
   {
-    name: 'phoneNumber',
+    name: 'phone_number',
     label: 'Phone Number',
     type: 'text',
     placeholder: 'Phone Number',
-    validation: { required: true },
+    validation: { required: false },
   },
   {
-    name: 'companyName',
-    label: 'Company Name',
+    name: 'company_name',
+    label: '*Company Name',
     type: 'text',
-    placeholder: 'Company Name (Optional)',
+    placeholder: '*Company Name',
+    validation: { required: false },
+  },
+
+  {
+    name: 'title',
+    label: 'Title',
+    type: 'text',
+    placeholder: '*Title',
     validation: { required: true },
   },
   {
@@ -39,21 +47,14 @@ export const inquiryFormSchema = [
     label: 'Website',
     type: 'text',
     placeholder: 'Website',
-    validation: { required: true },
-  },
-  {
-    name: 'title',
-    label: 'Company Title',
-    type: 'text',
-    placeholder: 'Title',
-    validation: { required: true },
+    validation: { required: false },
   },
   {
     name: 'note',
     label: 'Note',
     type: 'text',
     placeholder: 'Note',
-    validation: { required: true },
+    validation: { required: false },
   },
 ];
 //   {

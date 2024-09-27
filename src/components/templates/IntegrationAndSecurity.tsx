@@ -1,4 +1,5 @@
 import { Section } from '../layout/Section';
+import { TypographyH2 } from '../Text';
 
 const IntegrationAndSecurity = () => (
   <>
@@ -6,7 +7,9 @@ const IntegrationAndSecurity = () => (
       yPadding="py-16"
       title={
         <>
-          <h2>Seamless Integration with Your Existing Workflow</h2>
+          <TypographyH2>
+            Seamless Integration with Your Existing Workflow
+          </TypographyH2>
         </>
       }
     >

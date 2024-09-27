@@ -8,7 +8,12 @@ import { FourMainFeatures } from '@/components/templates/FourMainFeatures';
 import { HomepageHero } from '@/components/templates/HeroSections';
 import { IntegrationAndSecurity } from '@/components/templates/IntegrationAndSecurity';
 import { OptInSection } from '@/components/templates/Section';
-import { TypographyH6, TypographyP1 } from '@/components/Text';
+import {
+  TypographyH1,
+  TypographyH2,
+  TypographyH6,
+  TypographyP1,
+} from '@/components/Text';
 import { AppConfig } from '@/utils/AppConfig';
 
 interface Prop {
@@ -16,16 +21,16 @@ interface Prop {
   title: string;
   description: string;
 }
-export const ValuePropBlock = ({ icon, title, description }: Prop) => {
+export const ValuePropBlock = ({ title, description }: Prop) => {
   return (
     <div className="flex flex-col items-center gap-6 text-balance rounded-lg border p-4 text-center lg:w-1/3">
-      <img
+      {/* <img
         src={icon}
         alt={title}
         className="aspect-ratio h-[64px] max-w-[64px]"
-      />
+      /> */}
       <div>
-        <p className="text-xl font-bold">{title}</p>
+        <TypographyH1 className="">{title}</TypographyH1>
         <TypographyP1 className="text-center text-black text-opacity-50">
           {description}
         </TypographyP1>
@@ -81,9 +86,9 @@ const Index = () => (
       yPadding="py-16"
       title={
         <>
-          <h1>
+          <TypographyH2>
             Revolutionizing M&A Advisory & <br /> Capital Access for SMBs
-          </h1>
+          </TypographyH2>
         </>
       }
       description="Syncap is an AI-powered transaction-as-a-service platform providing M&A advisory and execution to SMBs at scale. Combining expertise of independent M&A bankers and cutting-edge platform technology, we transform investment banking with an outcome-driven approach  emphasizing visibility, efficiency, and alignment."
@@ -114,7 +119,7 @@ const Index = () => (
       yPadding="py-16"
       title={
         <>
-          <h1>Your Data, Confidential and Secure</h1>
+          <TypographyH2>Your Data, Confidential and Secure</TypographyH2>
         </>
       }
     >
