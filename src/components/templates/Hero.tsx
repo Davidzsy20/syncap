@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import { TypographyB2, TypographyH2, TypographyP1 } from '@/components/Text';
-import { landingPageBaseUrl } from '@/pages/_app';
 
 import { Background } from '../Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
@@ -27,9 +26,7 @@ const Hero = () => (
         }
         button={
           <Button className="mx-auto" variant={'primary'}>
-            <Link
-              href={`${landingPageBaseUrl}/qualification/interested_in_syncap`}
-            >
+            <Link href="/qualification/interest_in_syncap">
               <a>
                 <div className="flex items-center">
                   <TypographyB2

@@ -247,7 +247,7 @@ export const OptInSection = () => {
             />
             <Button
               onClick={handleClick}
-              className="flex h-fit self-end text-nowrap"
+              className="flex h-fit self-end text-nowrap items-center"
               variant="secondary"
             >
               <TypographyP1>Schedule a Free Consultation</TypographyP1>

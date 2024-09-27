@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import { TypographyB2, TypographyH2, TypographyP2 } from '@/components/Text';
-import { landingPageBaseUrl } from '@/pages/_app';
 import { MeetingLink } from '@/utils/AppConfig';
 
 import { Background } from '../Background';
@@ -31,9 +30,7 @@ export const HomepageHero = () => (
         }
         button={
           <Button className="mx-auto">
-            <Link
-              href={`${landingPageBaseUrl}/qualification/interested_in_syncap`}
-            >
+            <Link href="/qualification/interest_in_syncap">
               <div className="flex items-center">
                 <TypographyB2
                   className="text-primary-1050"

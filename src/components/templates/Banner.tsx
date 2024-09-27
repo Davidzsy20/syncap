@@ -24,7 +24,7 @@ const Banner = () => (
         >
           <Link
             href="/qualification/interest_in_syncap"
-            className="flex flex-nowrap"
+            className="flex flex-nowrap items-center"
           >
             <TypographyP2 className="font-medium">
               Schedule a Free Consultation
