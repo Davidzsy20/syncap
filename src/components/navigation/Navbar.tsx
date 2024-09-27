@@ -19,18 +19,16 @@ const Navbar = () => (
           className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"
         />
       </Link> */}
-      <Link href="/company">
-        <TypographyH6
-          text="Company"
-          className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"
-        />
-      </Link>
-      <Link href="/refer-a-business">
-        <TypographyH6
-          text="Refer a Business"
-          className="rounded-md px-2 py-1 font-normal text-gray-700 hover:bg-gray-200 active:bg-gray-300"
-        />
-      </Link>
+      <Button variant="transparent">
+        <Link href="/company">
+          <TypographyH6 text="Company" />
+        </Link>
+      </Button>
+      <Button variant="transparent">
+        <Link href="/refer-a-business">
+          <TypographyH6 text="Refer a Business" />
+        </Link>
+      </Button>
       <Button variant="solid">
         <Link href="https://workspace.syncap.ai/auth">
           <h1 className="font-normal text-gray-100">Member Sign In</h1>

@@ -41,7 +41,7 @@ export const NavbarMenu = () => {
     <Menu as="div" className="relative">
       <MenuButton
         onClick={toggleDropdown}
-        className="flex items-center gap-1 rounded-md px-2 py-1 focus:outline-none data-[active]:bg-gray-300 data-[hover]:bg-gray-200"
+        className="flex items-center gap-1 rounded-md p-2 focus:outline-none data-[active]:bg-primary-1050/20 data-[hover]:bg-primary-1050/20"
       >
         <TypographyH6 text="Platform" />
         <CaretDownIcon

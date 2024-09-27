@@ -63,7 +63,7 @@ export function TypographyH6(props: TypographyProps) {
   return (
     <div
       className={clsx(
-        'scroll-m-20 text-lg tracking-tight md:text-xl',
+        'headerFont scroll-m-20 text-base tracking-tight md:text-lg',
         props.className
       )}
     >
@@ -93,6 +93,14 @@ export function TypographyP1(props: TypographyProps) {
         props.className
       )}
     >
+      {props.children}
+    </div>
+  );
+}
+
+export function TypographyP1Compact(props: TypographyProps) {
+  return (
+    <div className={clsx('xs:text-md text-md', props.className)}>
       {props.children}
     </div>
   );
