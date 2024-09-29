@@ -13,7 +13,7 @@ export const DataContext = createContext<DataContextType | undefined>(
 );
 
 export const LOCAL_WORKSPACE = 'http://localhost:3000';
-const PROD_WORKSPACE = 'https://workspace.syncap.com';
+const PROD_WORKSPACE = 'https://workspace.syncap.ai';
 export const API_BASE_URL = 'https://api.syncap.ai';
 export const landingPageBaseUrl = 'https://www.syncap.ai';
 export const workspaceBaseUrl = PROD_WORKSPACE;
